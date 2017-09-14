@@ -1,10 +1,13 @@
 from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 import pandas as pd
 import os
 import requests
 import shutil
+import time
 
 if("Pictures" not in os.listdir(".")):
 	os.mkdir("Pictures")
@@ -45,6 +48,7 @@ for i in range(len(data)):
 
 	print("Working for " + data["Name"][i])
 	br.get(data['url'][i])
+	time.sleep(3)
 	image_url 	= br.find_element_by_xpath("//img[@class='player-img']").get_attribute("src")
 	name 		= br.find_element_by_xpath("//img[@class='player-img']").get_attribute("title")
 	while(True):
@@ -58,3 +62,5 @@ for i in range(len(data)):
 		shutil.copyfileobj(response.raw, out_file)
 	del response
 br.quit()
+
+
