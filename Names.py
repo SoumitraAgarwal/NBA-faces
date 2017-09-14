@@ -3,6 +3,7 @@ from bs4 import BeautifulSoup
 import os
 import requests
 import shutil
+import pandas as pd
 
 page 	= open("Webpages/List.html")
 soup 	= BeautifulSoup(page.read(), "lxml")
@@ -23,5 +24,5 @@ for name in names:
 	
 	print("Done for " + player_name)
 
-df=pd.DataFrame({'Name':player_names, 'url' : player_urs})
+df=pd.DataFrame({'Name':player_names, 'url' : player_urls})
 df.to_csv('Names.csv', index = False, encoding = 'utf-8')
