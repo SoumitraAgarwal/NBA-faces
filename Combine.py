@@ -2,55 +2,22 @@ import numpy as np
 import cv2
 import os
 
-base = 'Pictures/'
-images = os.listdir(base)
+base = 'Positional Pictures/'
+positions = os.listdir(base)
 
-if("Center" not in os.listdir(".")):
-	os.mkdir("Center")
+for position in positions:
 
-if("CenterF" not in os.listdir(".")):
-	os.mkdir("CenterF")
+	images = os.listdir(base + position)
+	output = cv2.imread(base + position + "/" + images[0])
+	image1 = cv2.imread(base + position + "/" + images[1])
+	
+	cv2.addWeighted(image1, 1.0/len(images), output, 1.0/len(images), 0, output)
 
-if("Guard" not in os.listdir(".")):
-	os.mkdir("Guard")
+	for i in range(2,len(images)):
 
-if("GuardF" not in os.listdir(".")):
-	os.mkdir("GuardF")
+		# load the image
+		image1 = cv2.imread(base + position + "/" + images[i])
+		cv2.addWeighted(image1, 1.0/len(images), output, 1, 0, output)
+	cv2.imwrite("Positional Pictures/" + position + ".png", output)
 
-if("Forward" not in os.listdir(".")):
-	os.mkdir("Forward")
 
-if("ForwardC" not in os.listdir(".")):
-	os.mkdir("ForwardC")
-
-if("ForwardG" not in os.listdir(".")):
-	os.mkdir("ForwardG")
-
-for image in images:
-	if(image[:5]=="Guard" and len(image) < 14):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('Guard/' + image, PIL)
-
-	if(image[:5]=="Guard" and len(image) > 14):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('GuardF/' + image, PIL)
-
-	if(image[:7]=="Forward" and len(image) < 14):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('Forward/' + image, PIL)
-
-	if(image[:9]=="Forward-C"):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('ForwardC/' + image, PIL)
-
-	if(image[:9]=="Forward-G"):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('ForwardG/' + image, PIL)
-
-	if(image[:6]=="Center" and len(image) < 14):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('Center/' + image, PIL)
-
-	if(image[:8]=="Center-F"):
-		PIL = cv2.imread('Pictures/' + image)
-		cv2.imwrite('CenterF/' + image, PIL)
