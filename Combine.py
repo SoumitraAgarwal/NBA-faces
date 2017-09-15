@@ -46,3 +46,11 @@ for image in images:
 	if(image[:9]=="Forward-G"):
 		PIL = cv2.imread('Pictures/' + image)
 		cv2.imwrite('ForwardG/' + image, PIL)
+
+	if(image[:6]=="Center" and len(image) < 14):
+		PIL = cv2.imread('Pictures/' + image)
+		cv2.imwrite('Center/' + image, PIL)
+
+	if(image[:8]=="Center-F"):
+		PIL = cv2.imread('Pictures/' + image)
+		cv2.imwrite('CenterF/' + image, PIL)
