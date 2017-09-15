@@ -1,5 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
@@ -46,21 +47,22 @@ br   = webdriver.Firefox(firefox_profile=profile)
 
 for i in range(len(data)):
 
-	print("Working for " + data["Name"][i])
+	name = data["Name"][i].split(',')[1][1:] + " " + data["Name"][i].split(',')[0]
+	print("Working for " + name)
+	print("//img[@title='" + name + "']")
 	br.get(data['url'][i])
-	time.sleep(3)
-	image_url 	= br.find_element_by_xpath("//img[@class='player-img']").get_attribute("src")
-	name 		= br.find_element_by_xpath("//img[@class='player-img']").get_attribute("title")
-	while(True):
-		try:
-			response = requests.get(image_url , stream=True,proxies=proxies)
-		except requests.exceptions.RequestException as e:  # This is the correct syntax
-			print(e)
-			continue
-		break	
-	with open('Pictures/'+ name + '.png', 'wb') as out_file:
-		shutil.copyfileobj(response.raw, out_file)
-	del response
+	try:
+		element 	= WebDriverWait(br, 10).until(EC.presence_of_element_located((By.XPATH, "//img[@title='" + name + "']")))
+		image_url 	= br.find_element_by_xpath("//img[@class='player-img']").get_attribute("src")
+		name 		= br.find_element_by_xpath("//img[@class='player-img']").get_attribute("title")
+		print(image_url)
+		br.get(data['url'][i])
+		page = br.page_source.encode('utf-8')
+		file = open("Webpages/Thrash/" + name + '.html', 'w')
+		file.write(page)
+		file.close()
+	except:
+		continue
 br.quit()
 
 
