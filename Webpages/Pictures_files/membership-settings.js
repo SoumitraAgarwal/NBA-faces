@@ -1,0 +1,36 @@
+/**
+ * Created by mchamblin on 6/6/16.
+ */
+var membership_settings = {
+  "jsNamespace":"_nba",
+  "jsSettings":"settings",
+  "cdnRoot": "",
+  "cdnRoot:js": "",
+  "cdnRoot:css": "",
+  "cdnRoot:static1": "/nba/tmpl_asset",
+  "cdnRoot:static2": "",
+  "cssBaseDynamic": "/nba/tmpl_asset",
+  "cssBaseStatic": "/nba/nba",
+  "cdnSecure":"https://s.cdn.turner.com/nba/tmpl_asset",
+  "cdnNonSecure":"http://z.cdn.turner.com/nba/tmpl_asset",
+  "cdnNonSecureImage":"http://i.cdn.turner.com/nba/tmpl_asset",
+  "membershipIdPrefix":"nbaMembership",
+  "membershipAccountApiServer": drupalSettings.membership_api,
+  "membershipAccountApiVersion": "1",
+  "membershipBasePath": "/membership",
+  "membershipEndUserCallbacks": "_nbaMembershipCallbacks",
+  "membershipFacebookAppId": "164914533589201",
+  "membershipFacebookApiVersion":"v2.3",
+  "membershipFacebookSdk":"//connect.facebook.net/en_US/sdk.js",
+  "membershipIdPrefix":"nbaMembership",
+  "membershipJavascriptDebug":"false",
+  "membershipJavascriptTestObject":"test",
+  "membershipTemplateBaseId":"nbaTemplate_Membership",
+  "storefrontIdPrefix":"nbaStorefront",
+  "leaguePassVideoServer": drupalSettings.site_url+"/games",
+  "umbelTestEnvironment": "prod",
+  "sdata":drupalSettings.sdata_url,
+  "svrPage":drupalSettings.site_url,
+  "svrStorefront":drupalSettings.storefront_url,
+  "svrSecure":drupalSettings.secure_url
+};

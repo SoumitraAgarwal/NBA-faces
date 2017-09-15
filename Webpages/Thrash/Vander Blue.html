@@ -1,0 +1,2063 @@
+<html xmlns:ng="http://angularjs.org" ng-app="stats" ng-strict-di="" ver="3.13.7" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+
+    <title>NBA.com/Stats </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The destination for current and historic NBA statistics.">
+
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" sizes="192x192" href="/media/img/touch/stats-icon-192x192.png">
+    <link rel="apple-touch-icon" href="/media/img/touch/stats-icon-128x128.png">
+
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="theme-color" content="#1D428A">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="NBA Stats">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="NBA Stats">
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700|Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/styles/theme.min.css">
+  <script src="http://connect.facebook.net/signals/config/418245194992316?v=2.7.21" async=""></script><script async="" src="//connect.facebook.net/en_US/fbevents.js"></script><script src="http://pagead2.googlesyndication.com/pagead/osd.js"></script><script type="text/javascript" src="http://cdn.krxd.net/userdata/get?pub=e9eaedd3-c1da-4334-82f0-d7e3ff883c87&amp;technographics=1&amp;callback=Krux.ns._default.kxjsonp_userdata"></script><script type="text/javascript" src="http://beacon.krxd.net/optout_check?callback=Krux.ns._default.kxjsonp_optOutCheck"></script><script type="text/javascript" src="http://beacon.krxd.net/cookie2json?callback=Krux.ns._default.kxjsonp_3pevents"></script><script type="text/javascript" async="" src="http://rtax.criteo.com/delivery/rta/rta.js?netId=4157&amp;cookieName=crtg_trnr&amp;rnd=31673834024&amp;varName=crtg_content"></script><script async="" src="//cdn.krxd.net/ctjs/controltag.js.1c86c30cac854ccdacab6e3099f5b9ee"></script><script type="text/javascript" async="" src="http://aax.amazon-adsystem.com/e/dtb/bid?src=3159&amp;u=http%3A%2F%2Fstats.nba.com%2Fplayer%2F%23!%2F203518%2F&amp;pid=1631174211505444575142&amp;cb=7242099551505444575957&amp;ws=1301x673&amp;v=5.4.0&amp;t=2000&amp;slots=%5B%7B%22sd%22%3A%22ad_bnr_atf_01%22%2C%22s%22%3A%5B%22970x90%22%2C%22728x90%22%5D%7D%5D"></script><script src="https://securepubads.g.doubleclick.net/gpt/pubads_impl_147.js" async=""></script><script src="http://79423.analytics.edgesuite.net/html5/akamaihtml5-min.js"></script><script src="http://b.scorecardresearch.com/beacon.js"></script><link rel="dns-prefetch" href="//fastlane.rubiconproject.com/"></head>
+
+  <body class="has-sap-sponser">
+
+    <header id="header-ad">
+      <div id="ad_bnr_atf_01" style="" data-google-query-id="COSThoqaptYCFQWfjgodn0QB9w" class=" adfuel-rendered"><div id="google_ads_iframe_/8663477/NBA/stats_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8663477/NBA/stats_0" title="advertisement" name="google_ads_iframe_/8663477/NBA/stats_0" scrolling="no" marginwidth="0" marginheight="0" srcdoc="" width="728" height="90" frameborder="0"></iframe></div></div>
+      <div id="ad_mod_92f78ded2" style="" data-google-query-id="CLv-v4uaptYCFVCfjgodeZMOdw" class=" adfuel-rendered"><div id="google_ads_iframe_/8663477/NBA/global_mktg_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/8663477/NBA/global_mktg_0" title="advertisement" name="google_ads_iframe_/8663477/NBA/global_mktg_0" scrolling="no" marginwidth="0" marginheight="0" srcdoc="" width="200" height="90" frameborder="0"></iframe></div></div>
+    </header>
+
+    <div class="[ show-for-large ] turner-nav">
+      <div class="turner-nav__inner">
+
+  <div class="turner-nav__logo">
+    <a href="http://www.nba.com"><img class="turner-nav__logo-img" alt="NBA Logo" title="NBA" src="/media/img/league/nba-logoman-word-white.svg"></a>
+  </div>
+
+  <ul class="turner-nav__left" role="navigation">
+    <li class="turner-nav__menu-item"><a href="http://stats.nba.com/scores"><span>Scores</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://stats.nba.com/schedule/#!/?rfr=nba"><span>Schedule</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://www.nba.com/news"><span>News</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://www.nba.com/video"><span>Video</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://www.nba.com/standings"><span>Standings</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://stats.nba.com"><span>Stats</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://stats.nba.com/players/"><span>Players</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://stats.nba.com/teams/"><span>Teams</span></a></li>
+  </ul>
+
+  <ul class="turner-nav__right" role="navigation">
+    <li class="turner-nav__menu-item"><a href="http://www.nba.com/leaguepass" title="NBA League Pass"><span>NBA LEAGUE PASS</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://www.nba.com/global/storelinkhandler.html" title="NBA Store"><span>Store</span></a></li>
+    <li class="turner-nav__menu-item"><a href="http://nbatickets.nba.com/" title="NBA Tickets"><span>Tickets</span></a></li>
+  </ul>
+
+</div>
+    </div>
+
+    <div class="stats-subheader [ show-for-large ]">
+      <div class="sap-flag [ show-for-sap ]">
+        <div class="sap-flag__inner ">
+          <a class="sap-flag__link" href=""><img class="sap-flag__image" src="/media/img/sap_header_v5.svg"></a>
+        </div>
+      </div>
+    </div>
+
+    <main class="stats-container">
+
+      <nav class="stats-dropdown ng-hide" ng-controller="StatsNavController" ng-show="showSiteNavigation" aria-hidden="true">
+
+  <section class="dropdown__base" style="height: 394px; overflow-y: auto;">
+
+    <div class="dropdown__item">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/">Stats Home</a>
+      </h4>
+    </div>
+
+    <!-- players: open -->
+    <div class="dropdown__category--active ng-hide" ng-show="isPlayerSection" aria-hidden="true">
+      <div class="dropdown__item" ng-click="toggleActiveMenu('player')" role="button" tabindex="0">
+        <h4 class="dropdown__item-header">
+          <a class="dropdown__item-header__link"> <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </h4>
+      </div>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isActiveMenu.player" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <!---->
+        <!---->
+
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <li><a href="/player/#!//career/">Career</a></li>
+
+        <!---->
+
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+
+        <!---->
+        <!---->
+        <!---->
+        <!---->
+      </ul>
+    </section>
+
+    <!-- teams: open -->
+    <div class="dropdown__category--active ng-hide" ng-show="isTeamSection" aria-hidden="true">
+      <div class="dropdown__item" ng-click="toggleActiveMenu('team')" role="button" tabindex="0">
+        <h4 class="dropdown__item-header">
+          <a class="dropdown__item-header__link">  <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </h4>
+      </div>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isActiveMenu.team" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/team/#!//" ng-click="toggleNav();">Profile</a></li>
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//traditional/" ng-click="toggleNav();">Traditional</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//advanced/" ng-click="toggleNav();">Advanced</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//four-factors/" ng-click="toggleNav();">Four Factors</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//misc/" ng-click="toggleNav();">Misc</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//scoring/" ng-click="toggleNav();">Scoring</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//opponent/" ng-click="toggleNav();">Opponent</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//shooting/" ng-click="toggleNav();">Shooting</a></li><!---->
+
+        <!-- lineups -->
+
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//lineups-traditional/" ng-click="toggleNav();">Lineups Traditional</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//lineups-advanced/" ng-click="toggleNav();">Lineups Advanced</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//lineups-four-factors/" ng-click="toggleNav();">Lineups Four Factors</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//lineups-misc/" ng-click="toggleNav();">Lineups Misc</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//lineups-scoring/" ng-click="toggleNav();">Lineups Scoring</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//lineups-opponent/" ng-click="toggleNav();">Lineups Opponent</a></li><!---->
+
+        <!-- players -->
+
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//players-traditional/" ng-click="toggleNav();">Players Traditional</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//players-advanced/" ng-click="toggleNav();">Players Advanced</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//players-misc/" ng-click="toggleNav();">Players Misc</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//players-scoring/" ng-click="toggleNav();">Players Scoring</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//players-usage/" ng-click="toggleNav();">Players Usage</a></li><!---->
+
+        <!-- on off court -->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-traditional/" ng-click="toggleNav();">On/Off Court Traditional</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-advanced/" ng-click="toggleNav();">On/Off Court Advanced</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-four-factors/" ng-click="toggleNav();">On/Off Court Four Factors</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-misc/" ng-click="toggleNav();">On/Off Court Misc</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-scoring/" ng-click="toggleNav();">On/Off Court Scoring</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-opponent/" ng-click="toggleNav();">On/Off Court Opponent</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//onoffcourt-summary/" ng-click="toggleNav();">On/Off Court Summary</a></li><!---->
+
+        <!-- tracking -->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//shots-dash/" ng-click="toggleNav();">Shots Dashboard</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//rebounds-dash/" ng-click="toggleNav();">Rebounds Dashboard</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//passes-dash/" ng-click="toggleNav();">Passes Dashboard</a></li><!---->
+
+        <!-- history -->
+        <li><a href="/team/#!//boxscores/" ng-click="toggleNav();">Box Scores</a></li>
+
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//boxscores-traditional/" ng-click="toggleNav();">Advanced Box Scores Traditional</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//boxscores-advanced/" ng-click="toggleNav();">Advanced Box Scores Advanced</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//boxscores-four-factors/" ng-click="toggleNav();">Advanced Box Scores Four Factors</a></li><!---->
+        <!----><li ng-if="!team.isSpecial"><a href="/team/#!//boxscores-misc/" ng-click="toggleNav();">Advanced Box Scores Misc</a></li><!---->
+        <!----><li ng-if="!team.isSpecial" s=""><a href="/team/#!//boxscores-scoring/" ng-click="toggleNav();">Advanced Box Scores Scoring</a></li><!---->
+
+        <li><a href="/team/#!//seasons/" ng-click="toggleNav();">Seasons</a></li>
+        <li><a href="/team/#!//yearoveryear/" ng-click="toggleNav();">Year Over Year</a></li>
+        <li><a href="/team/#!//franchise-leaders/" ng-click="toggleNav();">Franchise Leaders</a></li>
+        <li><a href="/team/#!//historic-roster/" ng-click="toggleNav();">Historic Roster</a></li>
+      </ul>
+    </section>
+
+
+    <!-- on off: open -->
+    <div class="dropdown__category--active ng-hide" ng-show="isOnOffSection" aria-hidden="true">
+      <div class="dropdown__item" ng-click="toggleActiveMenu('onoff')" role="button" tabindex="0">
+        <h4 class="dropdown__item-header">
+          <a class="dropdown__item-header__link">On Off Court Compare <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </h4>
+      </div>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isActiveMenu.onoff" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/vs/" ng-click="toggleNav();">Traditional</a></li>
+        <li><a href="/vs/advanced/" ng-click="toggleNav();">Advanced</a></li>
+        <li><a href="/vs/misc/" ng-click="toggleNav();">Misc</a></li>
+        <li><a href="/vs/scoring/" ng-click="toggleNav();">Scoring</a></li>
+        <li><a href="/vs/four-factors/" ng-click="toggleNav();">Four Factors</a></li>
+        <li><a href="/vs/opponent/" ng-click="toggleNav();">Opponent</a></li>
+      </ul>
+    </section>
+
+    <!-- game: open -->
+    <div class="dropdown__category--active ng-hide" ng-show="isGameSection" aria-hidden="true">
+      <div class="dropdown__item" ng-click="toggleActiveMenu('game')" role="button" tabindex="0">
+        <h4 class="dropdown__item-header">
+          <a class="dropdown__item-header__link"> <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </h4>
+      </div>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isActiveMenu.game" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/game/#!//">Box Score</a></li>
+        <li><a ng-show="game.sections.advancedStats" href="/game/#!//advanced/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Advanced</a></li>
+        <li><a ng-show="game.sections.advancedStats" href="/game/#!//misc/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Misc</a></li>
+        <li><a ng-show="game.sections.advancedStats" href="/game/#!//scoring/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Scoring</a></li>
+        <li><a ng-show="game.sections.advancedStats" href="/game/#!//usage/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Usage</a></li>
+        <li><a ng-show="game.sections.advancedStats" href="/game/#!//four-factors/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Four Factors</a></li>
+        <li><a ng-show="game.sections.playerTracking" href="/game/#!//tracking/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Player Tracking</a></li>
+        <li><a ng-show="game.sections.playByPlay" href="/game/#!//playbyplay/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Play By Play</a></li>
+        <li><a ng-show="game.sections.shotchart" href="/game/#!//shotchart/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Shotchart</a></li>
+        <li><a ng-show="game.sections.gameCharts" href="/game/#!//charts/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Game Charts</a></li>
+        <li><a ng-show="game.sections.hustle" href="/game/#!//hustle/" ng-click="toggleNav();" aria-hidden="true" class="ng-hide">Hustle</a></li>
+      </ul>
+    </section>
+
+    <!-- fantasy: open -->
+    <div class="dropdown__category--active ng-hide" ng-show="isFantasySection" aria-hidden="true">
+      <div class="dropdown__item" ng-click="toggleActiveMenu('fantasy')" role="button" tabindex="0">
+        <h4 class="dropdown__item-header">
+          <a class="dropdown__item-header__link">Fantasy Compare <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </h4>
+      </div>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isActiveMenu.fantasy" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/fantasycompare/" ng-click="toggleNav();">Traditional</a></li>
+        <li><a href="/fantasycompare/advanced/" ng-click="toggleNav();">Advanced</a></li>
+        <li><a href="/fantasycompare/misc/" ng-click="toggleNav();">Misc</a></li>
+        <li><a href="/fantasycompare/scoring/" ng-click="toggleNav();">Scoring</a></li>
+        <li><a href="/fantasycompare/usage/" ng-click="toggleNav();">Usage</a></li>
+      </ul>
+    </section>
+
+    <!-- impact: open -->
+    <div class="dropdown__category--active ng-hide" ng-show="isImpactSection" aria-hidden="true">
+      <div class="dropdown__item" ng-click="toggleActiveMenu('impact')" role="button" tabindex="0">
+        <h4 class="dropdown__item-header">
+          <a class="dropdown__item-header__link">Impact <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </h4>
+      </div>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isActiveMenu.impact" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/impact/#!" ng-click="toggleNav();">Traditional</a></li>
+        <li><a href="/impact/advanced/#!" ng-click="toggleNav();">Advanced</a></li>
+        <li><a href="/impact/misc/#!" ng-click="toggleNav();">Misc</a></li>
+        <li><a href="/impact/scoring/#!" ng-click="toggleNav();">Scoring</a></li>
+        <li><a href="/impact/four-factors/#!" ng-click="toggleNav();">Four Factors</a></li>
+        <!-- <li><a href="/impact/opponent/#!{{ impact }}" ng-click="toggleNav();">Opponent</a></li> -->
+        <!-- <li><a href="/impact/usage/#!{{ impact }}" ng-click="toggleNav();">Usage</a></li> -->
+        <li><a href="/impact/defense/#!" ng-click="toggleNav();">Defense</a></li>
+      </ul>
+    </section>
+
+
+    <div class="stats-dropdown__level--base__top"></div>
+
+
+    <!-- players -->
+    <div class="dropdown__item" ng-click="toggleCat('players')" ng-class="{'dropdown__item--active':isCat.players}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Players <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+
+    <!-- players - category -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.players" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/players/">Players Home</a></li>
+        <li><a href="/players/list/">Player Index</a></li>
+        <li><a href="/players/traditional/">Traditional Stats</a></li>
+        <li><a href="/leaders/">Regular Season Leaders</a></li>
+        <!----><li ng-if="flags.isHustleMenuActive"><a href="/players/hustle-leaders/">Hustle Leaders</a></li><!---->
+        <li><a href="/players/advanced-leaders/">Advanced Leaders</a></li>
+        <!-- <li><a href="/players/hustle-leaders/">Hustle Leaders</a></li> -->
+        <li><a href="/leaders/alltime/">All Time Leaders</a></li>
+
+        <!-- players / general -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'general')" ng-class="{'dropdown__item--active': isPlayersSub.general}" role="button" tabindex="0">
+          <a class="dropdown__item-header">General <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.general" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/traditional/">Traditional</a></li>
+            <li><a href="/players/advanced/">Advanced</a></li>
+            <li><a href="/players/misc/">Misc</a></li>
+            <li><a href="/players/scoring/">Scoring</a></li>
+            <li><a href="/players/usage/">Usage</a></li>
+            <li><a href="/players/opponent/">Opponent</a></li>
+            <li><a href="/players/defense/">Defense</a></li>
+          </ul>
+        </section>
+
+        <!-- players / clutch -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'clutch')" ng-class="{'dropdown__item--active': isPlayersSub.clutch}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Clutch <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.clutch" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/clutch-traditional/">Clutch Traditional</a></li>
+            <li><a href="/players/clutch-advanced/">Clutch Advanced</a></li>
+            <li><a href="/players/clutch-misc/">Clutch Misc</a></li>
+            <li><a href="/players/clutch-scoring/">Clutch Scoring</a></li>
+            <li><a href="/players/clutch-usage/">Clutch Usage</a></li>
+            <!-- <li><a href="/players/clutch-opponent/">Clutch Opponent</a></li> -->
+          </ul>
+        </section>
+
+        <!-- players / defense -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'defense')" ng-class="{'dropdown__item--active': isPlayersSub.defense}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Defense <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.defense" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/defense/">Defense Overall</a></li>
+            <li><a href="/players/defense-dash-overall/">Defending Shots Overall</a></li>
+            <li><a href="/players/defense-dash-3pt/">Defending 3 Pointers</a></li>
+            <li><a href="/players/defense-dash-2pt/">Defending 2 Pointers</a></li>
+            <li><a href="/players/defense-dash-lt6/">Defending Less Than 6 FT</a></li>
+            <li><a href="/players/defense-dash-lt10/">Defending Less Than 10 FT</a></li>
+            <li><a href="/players/defense-dash-gt15/">Defending More Than 15 FT</a></li>
+            <li><a href="/players/opponent-shooting/">Opponent Shooting</a></li>
+            <li><a href="/players/isolation/#!/?OD=defensive">By Play Type</a></li>
+          </ul>
+        </section>
+
+        <!-- players / playtype -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'playtype')" ng-class="{'dropdown__item--active': isPlayersSub.playtype}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Play Type <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.playtype" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/transition/">Transition</a></li>
+            <li><a href="/players/isolation/">Isolation</a></li>
+            <li><a href="/players/ball-handler/">Ball Handler</a></li>
+            <li><a href="/players/roll-man/">Roll Man</a></li>
+            <li><a href="/players/post-up/">Post Up</a></li>
+            <li><a href="/players/spot-up/">Spot Up</a></li>
+            <li><a href="/players/hand-off/">Hand Off</a></li>
+            <li><a href="/players/cut/">Cut</a></li>
+            <li><a href="/players/off-screen/">Off Screen</a></li>
+            <li><a href="/players/putbacks/">Put Backs</a></li>
+            <li><a href="/players/playtype-misc/">Misc</a></li>
+          </ul>
+        </section>
+
+        <!-- players / tracking -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'tracking')" ng-class="{'dropdown__item--active': isPlayersSub.tracking}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Tracking <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.tracking" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/catch-shoot/">Catch &amp; Shoot</a></li>
+            <li><a href="/players/defensive-impact/">Defensive Impact</a></li>
+            <li><a href="/players/drives/">Drives</a></li>
+            <li><a href="/players/passing/">Passing</a></li>
+            <li><a href="/players/touches/">Touches</a></li>
+            <li><a href="/players/pullup/">Pull Up Shooting</a></li>
+            <li><a href="/players/rebounding/">Rebounding</a></li>
+            <li><a href="/players/offensive-rebounding/">Offensive Rebounding</a></li>
+            <li><a href="/players/defensive-rebounding/">Defensive Rebounding</a></li>
+            <li><a href="/players/shooting-efficiency/">Shooting Efficiency</a></li>
+            <li><a href="/players/speed-distance/">Speed &amp; Distance</a></li>
+            <li><a href="/players/elbow-touch/">Elbow Touches</a></li>
+            <li><a href="/players/post-touch/">Post Touches</a></li>
+            <li><a href="/players/paint-touch/">Paint Touches</a></li>
+          </ul>
+        </section>
+
+        <!-- players / shots -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'shots')" ng-class="{'dropdown__item--active': isPlayersSub.shots}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Shooting <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.shots" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/shots-general/">Shots by General Range</a></li>
+            <li><a href="/players/shots-shotclock/">Shots by Shotclock</a></li>
+            <li><a href="/players/shots-dribbles/">Shots by Dribbles</a></li>
+            <li><a href="/players/shots-touch-time/">Shots by Touch Time</a></li>
+            <li><a href="/players/shots-closest-defender/">Shots by Closest Defender</a></li>
+            <li><a href="/players/shots-closest-defender-10/">Shots by Closest Defender (+10 FT)</a></li>
+            <li><a href="/players/shooting/">Shooting</a></li>
+            <li><a href="/players/opponent-shooting/">Opponent Shooting</a></li>
+          </ul>
+        </section>
+
+        <li><a href="/players/hustle/">Hustle Stats</a></li>
+        <li><a href="/players/bio/">Bios</a></li>
+        <li><a href="/players/boxscores/">Box Scores</a></li>
+
+        <!-- players / advanced game logs -->
+        <li class="dropdown__item" ng-click="toggleSub(isPlayersSub, 'advboxscores')" ng-class="{'dropdown__item--active': isPlayersSub.advboxscores}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Advanced Box Scores <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isPlayersSub.advboxscores" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/players/boxscores-traditional/">Traditional</a></li>
+            <li><a href="/players/boxscores-advanced/">Advanced</a></li>
+            <li><a href="/players/boxscores-misc/">Misc</a></li>
+            <li><a href="/players/boxscores-scoring/">Scoring</a></li>
+            <li><a href="/players/boxscores-usage/">Usage</a></li>
+          </ul>
+        </section>
+
+
+      </ul>
+    </section>
+
+    <!-- teams -->
+    <div class="dropdown__item" ng-click="toggleCat('teams')" ng-class="{'dropdown__item--active':isCat.teams}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Teams <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <section class="dropdown__category ng-hide" ng-show="isCat.teams" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/teams/">Teams Home</a></li>
+
+        <!-- teams / general -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'list')" ng-class="{'dropdown__item--active': isTeamsSub.list}" role="button" tabindex="0">
+          <a class="dropdown__item-header">All Teams <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.list" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <!----><li ng-repeat="t in teams"><a href="/team/#!/1610612737">Atlanta Hawks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612738">Boston Celtics</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612751">Brooklyn Nets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612766">Charlotte Hornets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612741">Chicago Bulls</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612739">Cleveland Cavaliers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612742">Dallas Mavericks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612743">Denver Nuggets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612765">Detroit Pistons</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612744">Golden State Warriors</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612745">Houston Rockets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612754">Indiana Pacers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612746">LA Clippers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612747">Los Angeles Lakers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612763">Memphis Grizzlies</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612748">Miami Heat</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612749">Milwaukee Bucks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612750">Minnesota Timberwolves</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612740">New Orleans Pelicans</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612752">New York Knicks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612760">Oklahoma City Thunder</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612753">Orlando Magic</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612755">Philadelphia 76ers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612756">Phoenix Suns</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612757">Portland Trail Blazers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612758">Sacramento Kings</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612759">San Antonio Spurs</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612761">Toronto Raptors</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612762">Utah Jazz</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612764">Washington Wizards</a></li><!---->
+          </ul>
+        </section>
+
+        <li><a href="/teams/traditional/">Traditional Stats</a></li>
+        <!----><li ng-if="flags.isHustleMenuActive"><a href="/teams/hustle-leaders/">Hustle Leaders</a></li><!---->
+        <li><a href="/teams/advanced-leaders/">Advanced Leaders</a></li>
+        <!-- <li><a href="/teams/hustle-leaders/">Hustle Leaders</a></li> -->
+
+        <!-- teams / general -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'general')" ng-class="{'dropdown__item--active': isTeamsSub.general}" role="button" tabindex="0">
+          <a class="dropdown__item-header">General <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.general" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/traditional/">Traditional</a></li>
+            <li><a href="/teams/advanced/">Advanced</a></li>
+            <li><a href="/teams/misc/">Misc</a></li>
+            <li><a href="/teams/four-factors/">Four Factors</a></li>
+            <li><a href="/teams/scoring/">Scoring</a></li>
+            <li><a href="/teams/opponent/">Opponent</a></li>
+            <li><a href="/teams/defense/">Defense</a></li>
+          </ul>
+        </section>
+
+        <!-- clutch -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'clutch')" ng-class="{'dropdown__item--active': isTeamsSub.clutch}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Clutch <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.clutch" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/clutch-traditional/">Clutch Traditional</a></li>
+            <li><a href="/teams/clutch-advanced/">Clutch Advanced</a></li>
+            <li><a href="/teams/clutch-misc/">Clutch Misc</a></li>
+            <li><a href="/teams/clutch-four-factors/">Clutch Four Factors</a></li>
+            <li><a href="/teams/clutch-scoring/">Clutch Scoring</a></li>
+            <li><a href="/teams/clutch-opponent/">Clutch Opponent</a></li>
+          </ul>
+        </section>
+
+        <!-- teams / defense -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'defense')" ng-class="{'dropdown__item--active': isTeamsSub.defense}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Defense <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.defense" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/defense/">Defense Overall</a></li>
+            <li><a href="/teams/defense-dash-overall/">Defending Shots Overall</a></li>
+            <li><a href="/teams/defense-dash-3pt/">Defending 3 Pointers</a></li>
+            <li><a href="/teams/defense-dash-2pt/">Defending 2 Pointers</a></li>
+            <li><a href="/teams/defense-dash-lt6/">Defending Less Than 6 FT</a></li>
+            <li><a href="/teams/defense-dash-lt10/">Defending Less Than 10 FT</a></li>
+            <li><a href="/teams/defense-dash-gt15/">Defending More Than 15 FT</a></li>
+            <li><a href="/teams/opponent-shooting/">Overall Opponent Shooting</a></li>
+            <li><a href="/teams/isolation/#!/?OD=defensive">By Play Type</a></li>
+          </ul>
+        </section>
+
+        <!-- teams / playtype -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'playtype')" ng-class="{'dropdown__item--active': isTeamsSub.playtype}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Play Type <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.playtype" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/transition/">Transition</a></li>
+            <li><a href="/teams/isolation/">Isolation</a></li>
+            <li><a href="/teams/ball-handler/">Ball Handler</a></li>
+            <li><a href="/teams/roll-man/">Roll Man</a></li>
+            <li><a href="/teams/post-up/">Post Up</a></li>
+            <li><a href="/teams/spot-up/">Spot Up</a></li>
+            <li><a href="/teams/hand-off/">Hand Off</a></li>
+            <li><a href="/teams/cut/">Cut</a></li>
+            <li><a href="/teams/off-screen/">Off Screen</a></li>
+            <li><a href="/teams/putbacks/">Put Backs</a></li>
+            <li><a href="/teams/playtype-misc/">Misc</a></li>
+          </ul>
+        </section>
+
+        <!-- teams / tracking -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'tracking')" ng-class="{'dropdown__item--active': isTeamsSub.tracking}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Tracking <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.tracking" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/catch-shoot/">Catch &amp; Shoot</a></li>
+            <li><a href="/teams/defensive-impact/">Defensive Impact</a></li>
+            <li><a href="/teams/drives/">Drives</a></li>
+            <li><a href="/teams/passing/">Passing</a></li>
+            <li><a href="/teams/touches/">Touches</a></li>
+            <li><a href="/teams/pullup/">Pull Up Shooting</a></li>
+            <li><a href="/teams/rebounding/">Rebounding</a></li>
+            <li><a href="/teams/offensive-rebounding/">Offensive Rebounding</a></li>
+            <li><a href="/teams/defensive-rebounding/">Defensive Rebounding</a></li>
+            <li><a href="/teams/shooting-efficiency/">Shooting Efficiency</a></li>
+            <li><a href="/teams/speed-distance/">Speed &amp; Distance</a></li>
+            <li><a href="/teams/elbow-touch/">Elbow Touches</a></li>
+            <li><a href="/teams/post-touch/">Post Touches</a></li>
+            <li><a href="/teams/paint-touch/">Paint Touches</a></li>
+          </ul>
+        </section>
+
+        <!-- teams / shot dashboard -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'shotdash')" ng-class="{'dropdown__item--active': isTeamsSub.shotdash}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Shooting <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.shotdash" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/shots-general/">Shots By General Range</a></li>
+            <li><a href="/teams/shots-shotclock/">Shots By Shotclock</a></li>
+            <li><a href="/teams/shots-dribbles/">Shots By Dribbles</a></li>
+            <li><a href="/teams/shots-touch-time/">Shots By Touch Time</a></li>
+            <li><a href="/teams/shots-closest-defender/">Shots By Closest Defender</a></li>
+            <li><a href="/teams/shots-closest-defender-10/">Shots By Closest Defender (+10 FT)</a></li>
+            <li><a href="/teams/shooting/">Shooting</a></li>
+          </ul>
+        </section>
+
+
+        <!-- teams / opp shooting dashboard -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'oppshotdash')" ng-class="{'dropdown__item--active': isTeamsSub.oppshotdash}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Opponent Shooting <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.oppshotdash" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/opponent-shooting/">Overall Opponent Shooting</a></li>
+            <li><a href="/teams/opponent-shots-general/">Opponent Shots By General Range</a></li>
+            <li><a href="/teams/opponent-shots-shotclock/">Opponent Shots By Shotclock</a></li>
+            <li><a href="/teams/opponent-shots-dribbles/">Opponent Shots By Dribbles</a></li>
+            <li><a href="/teams/opponent-shots-touch-time/">Opponent Shots By Touch Time</a></li>
+            <li><a href="/teams/opponent-shots-closest-defender/">Opponent Shots By Closest Defender</a></li>
+            <li><a href="/teams/opponent-shots-closest-defender-10/">Opponent Shots By Closest Defender (+10 FT)</a></li>
+          </ul>
+        </section>
+
+
+        <li><a href="/teams/hustle/">Hustle Stats</a></li>
+        <li><a href="/teams/boxscores/">Box Scores</a></li>
+
+        <!-- teams / advanced game logs -->
+        <li class="dropdown__item" ng-click="toggleSub(isTeamsSub, 'advboxscores')" ng-class="{'dropdown__item--active': isTeamsSub.advboxscores}" role="button" tabindex="0">
+          <a class="dropdown__item-header">Advanced Box Scores <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+
+        <section class="dropdown__subcategory ng-hide" ng-show="isTeamsSub.advboxscores" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a href="/teams/boxscores-traditional/">Traditional</a></li>
+            <li><a href="/teams/boxscores-advanced/">Advanced</a></li>
+            <li><a href="/teams/boxscores-four-factors/">Four Factors</a></li>
+            <li><a href="/teams/boxscores-misc/">Misc</a></li>
+            <li><a href="/teams/boxscores-scoring/">Scoring</a></li>
+          </ul>
+        </section>
+
+
+      </ul>
+    </section>
+
+    <div class="dropdown__separator"></div>
+
+    <!----><div class="dropdown__item" ng-if="flags.isHustleMenuActive">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/players/hustle-leaders/">Hustle Leaders</a>
+      </h4>
+    </div><!---->
+
+    <div class="dropdown__item">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/players/advanced-leaders/">Advanced Leaders</a>
+      </h4>
+    </div>
+
+    <!-- <div class="dropdown__item">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/players/hustle-leaders/">Hustle Leaders</a>
+      </h4>
+    </div> -->
+
+    <div class="dropdown__item">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/scores/">Scores</a>
+      </h4>
+    </div>
+
+    <div class="dropdown__item">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/schedule/">Schedule</a>
+      </h4>
+    </div>
+
+    <div class="dropdown__item">
+      <h4 class="dropdown__item-header">
+        <a class="dropdown__item-header__link" href="/standings/">Standings</a>
+      </h4>
+    </div>
+
+    <!-- franchiseleaders  -->
+    <div class="dropdown__item" ng-click="toggleCat('franchiseleaders');" ng-class="{'dropdown__item--active':isCat.franchiseleaders}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Franchise Leaders<i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: franchiseleaders -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.franchiseleaders" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <!----><li ng-repeat="t in teams"><a href="/team/#!/1610612737/franchise-leaders">Atlanta Hawks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612738/franchise-leaders">Boston Celtics</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612751/franchise-leaders">Brooklyn Nets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612766/franchise-leaders">Charlotte Hornets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612741/franchise-leaders">Chicago Bulls</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612739/franchise-leaders">Cleveland Cavaliers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612742/franchise-leaders">Dallas Mavericks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612743/franchise-leaders">Denver Nuggets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612765/franchise-leaders">Detroit Pistons</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612744/franchise-leaders">Golden State Warriors</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612745/franchise-leaders">Houston Rockets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612754/franchise-leaders">Indiana Pacers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612746/franchise-leaders">LA Clippers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612747/franchise-leaders">Los Angeles Lakers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612763/franchise-leaders">Memphis Grizzlies</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612748/franchise-leaders">Miami Heat</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612749/franchise-leaders">Milwaukee Bucks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612750/franchise-leaders">Minnesota Timberwolves</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612740/franchise-leaders">New Orleans Pelicans</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612752/franchise-leaders">New York Knicks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612760/franchise-leaders">Oklahoma City Thunder</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612753/franchise-leaders">Orlando Magic</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612755/franchise-leaders">Philadelphia 76ers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612756/franchise-leaders">Phoenix Suns</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612757/franchise-leaders">Portland Trail Blazers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612758/franchise-leaders">Sacramento Kings</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612759/franchise-leaders">San Antonio Spurs</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612761/franchise-leaders">Toronto Raptors</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612762/franchise-leaders">Utah Jazz</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612764/franchise-leaders">Washington Wizards</a></li><!---->
+      </ul>
+    </section>
+
+
+    <!-- lineups -->
+    <div class="dropdown__item" ng-click="toggleCat('lineups')" ng-class="{'dropdown__item--active':isCat.lineups}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Lineups <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: lineups -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.lineups" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/lineups/traditional/">Traditional</a></li>
+        <li><a href="/lineups/advanced/">Advanced</a></li>
+        <li><a href="/lineups/misc/">Misc</a></li>
+        <li><a href="/lineups/four-factors/">Four Factors</a></li>
+        <li><a href="/lineups/scoring/">Scoring</a></li>
+        <li><a href="/lineups/opponent/">Opponent</a></li>
+      </ul>
+    </section>
+
+    <!-- onoff  -->
+    <div class="dropdown__item" ng-click="toggleCat('onoff');" ng-class="{'dropdown__item--active':isCat.onoff}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">On/Off Court by Team <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: onoff -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.onoff" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <!----><li ng-repeat="t in teams"><a href="/team/#!/1610612737/onoffcourt-summary">Atlanta Hawks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612738/onoffcourt-summary">Boston Celtics</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612751/onoffcourt-summary">Brooklyn Nets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612766/onoffcourt-summary">Charlotte Hornets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612741/onoffcourt-summary">Chicago Bulls</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612739/onoffcourt-summary">Cleveland Cavaliers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612742/onoffcourt-summary">Dallas Mavericks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612743/onoffcourt-summary">Denver Nuggets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612765/onoffcourt-summary">Detroit Pistons</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612744/onoffcourt-summary">Golden State Warriors</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612745/onoffcourt-summary">Houston Rockets</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612754/onoffcourt-summary">Indiana Pacers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612746/onoffcourt-summary">LA Clippers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612747/onoffcourt-summary">Los Angeles Lakers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612763/onoffcourt-summary">Memphis Grizzlies</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612748/onoffcourt-summary">Miami Heat</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612749/onoffcourt-summary">Milwaukee Bucks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612750/onoffcourt-summary">Minnesota Timberwolves</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612740/onoffcourt-summary">New Orleans Pelicans</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612752/onoffcourt-summary">New York Knicks</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612760/onoffcourt-summary">Oklahoma City Thunder</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612753/onoffcourt-summary">Orlando Magic</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612755/onoffcourt-summary">Philadelphia 76ers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612756/onoffcourt-summary">Phoenix Suns</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612757/onoffcourt-summary">Portland Trail Blazers</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612758/onoffcourt-summary">Sacramento Kings</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612759/onoffcourt-summary">San Antonio Spurs</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612761/onoffcourt-summary">Toronto Raptors</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612762/onoffcourt-summary">Utah Jazz</a></li><!----><li ng-repeat="t in teams"><a href="/team/#!/1610612764/onoffcourt-summary">Washington Wizards</a></li><!---->
+      </ul>
+    </section>
+
+
+    <!-- draft -->
+    <div class="dropdown__item" ng-click="toggleCat('draft')" ng-class="{'dropdown__item--active':isCat.draft}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Draft &amp; Combine <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: draft -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.draft" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/draft/history/">Draft History</a></li>
+        <li><a href="/draft/combine/">2017 Draft Combine</a></li>
+        <li><a href="/draft/combine-spot-up/">Combine Spot Up Shooting</a></li>
+        <li><a href="/draft/combine-non-stationary/">Combine Non-Stationary Shooting</a></li>
+        <li><a href="/draft/combine-strength-agility/">Combine Strength &amp; Agility</a></li>
+        <li><a href="/draft/combine-anthro/">Combine Anthro</a></li>
+      </ul>
+    </section>
+
+
+    <!-- tools -->
+    <div class="dropdown__item" ng-click="toggleCat('tools')" ng-class="{'dropdown__item--active':isCat.tools}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Tools <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: tools -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.tools" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/search/player-game/">Player Box Score Search</a></li>
+        <li><a href="/search/team-game/">Team Box Score Search</a></li>
+        <li><a href="/search/player-streak/">Player Streak Search</a></li>
+        <li><a href="/search/team-streak/">Team Streak Search</a></li>
+        <li><a href="/vs/">Player Compare</a></li>
+        <li><a href="/fantasycompare/">Fantasy Compare</a></li>
+        <li><a href="/impact/">Impact</a></li>
+      </ul>
+    </section>
+
+
+    <!-- Stats 101: OTHER -->
+    <div class="dropdown__item" ng-click="toggleCat('other')" ng-class="{'dropdown__item--active':isCat.other}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Stats 101<i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: other -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.other" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/history/">Franchise History</a></li>
+        <li><a href="/help/statminimums/">Statistical Minimums</a></li>
+        <li><a href="/transactions/">Transactions</a></li>
+        <li><a href="/fantasynews/">Fantasy News</a></li>
+        <li><a href="/featuredarchive/">Articles</a></li>
+        <li><a href="/spotlightarchive/">Weekly Stats Archive</a></li>
+        <li><a href="/help/glossary/">Glossary</a></li>
+        <li><a href="/help/faq/">FAQ</a></li>
+        <li><a href="/help/whatsnew/">What's New</a></li>
+        <li><a href="/help/videostatus/">Video &amp; Tracking Status</a></li>
+        <li><a href="http://videorulebook.nba.com">Video Rulebook</a></li>
+        <li><a href="/help/">Contact Us</a></li>
+      </ul>
+    </section>
+
+
+    <!-- NBA Events -->
+    <div class="dropdown__item" ng-click="toggleCat('nbaEvents')" ng-class="{'dropdown__item--active':isCat.nbaEvents}" role="button" tabindex="0">
+      <h4 class="dropdown__item-header">Events <i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></h4>
+    </div>
+
+    <!-- category: nbaEvents -->
+    <section class="dropdown__category ng-hide" ng-show="isCat.nbaEvents" aria-hidden="true">
+      <ul class="dropdown__category-list" style="height: 394px; overflow-y: auto;">
+        <li><a href="/finals/">2017 Finals</a></li>
+        <li><a href="/playoffs/">2017 Playoffs</a></li>
+        <li><a href="/schedule/summerleague/">2017 Summer League</a></li>
+        <li><a href="/africa2017/">NBA Africa Game 2017</a></li>
+        <li class="dropdown__item" ng-click="toggleSub(isEventsSub, 'allstar')" ng-class="{'dropdown__item--active': isEventsSub.allstar}" role="button" tabindex="0">
+          <a class="dropdown__item-header">All-Star Infographics<i class="dropdown__item-header__arrow [ fa / fa-chevron-right / show-for-large ]" aria-hidden="true"></i><i class="dropdown__item-header__arrow [ fa / fa-chevron-down / hide-for-large ]" aria-hidden="true"></i></a>
+        </li>
+        <section class="dropdown__subcategory ng-hide" ng-show="isEventsSub.allstar" aria-hidden="true">
+          <ul class="dropdown__subcategory-list" style="height: 394px; overflow-y: auto;">
+            <li><a class="dropdown__item-header__link" href="/allstar/friday.html">All-Star Friday Infographic</a></li>
+            <li><a class="dropdown__item-header__link" href="/allstar/saturday.html">All-Star Saturday Infographic</a></li>
+            <li><a class="dropdown__item-header__link" href="/allstar/sunday.html">All-Star Sunday Infographic</a></li>
+          </ul>
+        </section>
+        <li><a href="/draft/combine/">2017 Draft Combine</a></li>
+      </ul>
+    </section>
+
+
+  </section>
+
+</nav>
+
+      <div class="nav-container" ng-controller="StatsHeaderController" set-class-scroll-top="" data-element-class="nav-container--fixed" data-body-class="nav--fixed">
+
+  <div class="nav-inner" style="position: relative;">
+    <!-- left: inner nav -->
+    <nav class="nav-inner__menu nav-inner__menu--left" role="navigation">
+      <div class="nav-inner__menu-button" ng-click="toggleNav($event)" role="button" tabindex="0">
+        <i class="nav-inner__menu-button-icon [ fa fa-bars fa-lg ]" aria-hidden="true"></i>
+        <img class="nav-inner__logo" src="/media/img/league/nba-logoman.svg" alt="NBA.com/Stats Logo" title="NBA.com/Stats">
+        <span class="nav-inner__wordmark">Stats</span>
+      </div>
+      <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='home' }"><a href="/">Stats Home</a></div>
+      <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='players' }"><a href="/players/">Players</a></div>
+      <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='teams' }"><a href="/teams/">Teams</a></div>
+      <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='leaders' }"><a href="/players/advanced-leaders/">Advanced</a></div>
+      <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='scores' }"><a href="/scores/">Scores</a></div>
+      <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='schedule' }"><a href="/schedule/">Schedule</a></div>
+      <!-- <div class="nav-inner__menu-item" ng-show="flags.isHustleMenuActive" ng-class="{ active: activeTab=='hustle' }"><a href="/players/hustle-leaders">Hustle Stats</a></div> -->
+      <!-- <div class="nav-inner__menu-item" ng-class="{ active: activeTab=='playoffs' }"><a href="/finals/">2017 Finals</a></div> -->
+    </nav> <!-- .nav-inner__menu -->
+
+
+    <!-- right: search -->
+    <!-- add active class to test active search state -->
+    <div class="nav-inner__search nav-inner__search--right stats-search" ng-class="{ active: showSearch }" ng-controller="StatsSearchController">
+
+  <!-- search icon, always visible -->
+  <div class="stats-search__top">
+    <input class="stats-search__input ng-pristine ng-untouched ng-valid ng-empty ng-hide" ng-model="search" ng-keydown="onKeyDown($event)" ng-change="onChange($event)" ng-show="showSearch" aria-hidden="true" aria-invalid="false" type="text">
+    <a class="stats-search__icon" ng-click="toggleSearch();">
+      <span class="stats-search__icon-text">Search For A Player or Team</span><i class="[ fa / fa-search ]" aria-hidden="true"></i>
+    </a>
+  </div>
+
+  <div class="stats-search__results ng-hide" ng-show="showResults" aria-hidden="true">
+    <div class="stats-search__results-inner">
+
+      <div class="stats-search__section stats-search__section--none ng-hide" ng-show="!hasResults &amp;&amp; search.length > 3" aria-hidden="true">
+        <span class="stats-search__no-results">No Results Found</span>
+      </div> <!-- .stats-search__section -->
+
+      <div class="stats-search__section ng-hide" ng-show="searchResults.length" ng-class="{recent: showRecent}" aria-hidden="true">
+
+        <!----><!-- .stats-search__item -->
+
+        <div class="stats-search__show-all">
+          <a class="searchbar__results__link searchbar__results__link--more ng-hide" ng-show="searchResults.length > maxResults" ng-href="/players/#!/?player=&amp;historic=1" href="/players/#!/?player=&amp;historic=1" aria-hidden="true">See More Results</a>
+        </div>
+
+      </div> <!-- .stats-search__section -->
+
+    </div> <!-- .stats-search__results-inner -->
+  </div> <!-- .stats-search__results -->
+
+
+</div> <!-- .stats-search -->
+
+
+    <div class="nav-inner__sap-insights [ show-for-sap ]">
+      <a href="">
+        <img src="/media/img/sap-insights.svg" alt="Insights From SAP" title="Insights From SAP">
+      </a>
+    </div>
+
+  </div>
+
+
+
+</div>
+
+      <div class="stats-container__inner">
+
+<div class="stats-player-page">
+
+  <div ng-controller="PlayerSummaryController">
+
+    <div class="breadcrumbs">
+      <span><a href="/">Stats Home</a></span> / <span><a href="/players/">Player</a></span> / <span>   </span>
+    </div>
+
+    <div>
+      <div class="summary">
+  <div stats-loader="isLoading"><!----><div ng-if="statsLoader" class="loader"><img src="/media/img/pacifier.svg"></div><!----></div>
+  <!----><div ng-include="'/templates/angular/views/player/player-summary.html'"><div class="row ng-hide" data-ng-hide="isLoading" style="margin: 0;" itemscope="" itemtype="http://schema.org/Person" aria-hidden="true">
+    <div class="[ small-12 / columns ]" style="position: relative;">
+
+        <div class="summary__container team-color-gradient  n-p [ small-12 / columns ]">
+            <!---->
+            <div class="player-summary">
+                <div class="player-summary__image-block">
+                    <img player-headshot="" player-id="" team-id="" season="" class="player-img">
+                </div>
+
+                <div class="player-summary__info">
+                    <a ng-href="/team/#!//" class="player-summary__team-logo" href="/team/#!//">
+                        <img team-logo="" abbr="" class="team-img" type="image/svg+xml">
+                    </a>
+                    <div class="player-summary__text">
+                        <div class="player-summary__text-top">
+                            <!---->
+                            <div class="player-summary__player-name" itemprop="name">
+                                <p class="player-summary__first-name" itemprop="givenName"></p>
+                                <p class="player-summary__last-name" itemprop="familyName"></p>
+                            </div>
+                        </div>
+                        <div class="player-summary__text-bottom">
+                            <!---->
+                            <a ng-href="/team/#!//" itemprop="affiliation" itemscope="" itemtype="https://schema.org/SportsTeam" href="/team/#!//"><span itemprop="name" class="player-summary__team-name"> </span></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-summary__right-links">
+                    <!---->
+                    <a ng-href="/vs/#!/?PlayerID=" href="/vs/#!/?PlayerID=">Compare Player</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="player-stats n-p [ columns / small-12 ]">
+            <div class="player-stats__right n-p [ columns / medium-4 / medium-push-8 ]">
+                <div class="player-stats__item player-stats__pts n-p [ columns / small-3 ]" ng-class="{ 'stats-link': availableStats.current }">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">PTS</div><!---->
+                    <!----><span ng-if="!availableStats.current" class="player-stats__stat-value"></span><!---->
+                </div>
+                <div class="player-stats__item player-stats__reb n-p [ columns / small-3 ]" ng-class="{ 'stats-link': availableStats.current }">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">REB</div><!---->
+                    <!----><span ng-if="!availableStats.current" class="player-stats__stat-value"></span><!---->
+                </div>
+                <div class="player-stats__item player-stats__ast n-p [ columns / small-3 ]" ng-class="{ 'stats-link': availableStats.current }">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">AST</div><!---->
+                    <!----><span ng-if="!availableStats.current" class="player-stats__stat-value"></span><!---->
+                </div>
+                <div class="player-stats__item player-stats__pie n-p [ columns / small-3 ]" ng-class="{ 'stats-link': availableStats.current }">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">PIE</div><!---->
+                    <!----><span ng-if="!availableStats.current" class="player-stats__stat-value">-</span><!---->
+                </div>
+            </div>
+            <div class="player-stats__left n-p [ columns / medium-4 / medium-pull-4 ]">
+                <div class="player-stats__item player-stats__height n-p columns small-4" ng-class="availableStats.current ? 'stats-link columns small-3 medium-6' : 'columns small-4'">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">HT</div><!---->
+                    <!----><span ng-if="!availableStats.current" class="player-stats__stat-value" itemprop="height"></span><!---->
+                </div>
+                <div class="player-stats__item player-stats__weight n-p columns small-4" ng-class="availableStats.current ? 'stats-link columns small-3 medium-6' : 'columns small-4'">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">WT</div><!---->
+                    <!---->
+                </div>
+                <div class="player-stats__item player-stats__age n-p hide" ng-class="availableStats.current ? 'stats-link columns small-3 medium-6' : 'hide'">
+                    <!---->
+                    <!----><div ng-if="!availableStats.current" class="player-stats__stat-title">AGE</div><!---->
+                    <!----> <!---->
+                </div>
+                <div class="player-stats__item player-stats__birthdate n-p columns small-4" ng-class="availableStats.current ? 'columns small-3 medium-6' : 'columns small-4'">
+                    <div class="player-stats__stat-title">BORN</div>
+                    <span class="player-stats__stat-value" itemprop="birthDate"></span>
+                </div>
+            </div>
+            <div class="player-stats__middle n-p [ columns / medium-4 / medium-pull-4 ]">
+                <div class="player-stats__item player-stats__prior n-p [ columns / small-6 / medium-12 ]">
+                    <div class="player-stats__stat-title">PRIOR</div>
+                    <span class="player-stats__stat-value" itemprop="alumniOf"></span>
+                </div>
+                <div class="player-stats__item player-stats__draft n-p [ columns / small-6 / medium-8 ] stats-link" ng-class="playerInfo.DRAFT_YEAR != 'Undrafted' ? 'stats-link' : ''">
+                    <!----><a ng-if="playerInfo.DRAFT_YEAR != 'Undrafted'" href="/draft/history/#!?Season=">
+                        <div class="player-stats__stat-title">DRAFT</div>
+                        <span class="player-stats__stat-value"> Rnd  Pick </span>
+                    </a><!---->
+                    <!---->
+                    <!---->
+                </div>
+                <div class="player-stats__item player-stats__experience n-p [ columns / medium-4 / hide-for-small-only ]">
+                    <div class="player-stats__stat-title">EXP</div>
+                    <!----><div class="player-stats__stat-value" ng-if="playerInfo.SEASON_EXP!=0"> <span class="player-stats__exp-yrs">yrs</span></div><!---->
+                    <!---->
+                </div>
+            </div>
+        </div>
+
+        <!---->
+    </div>
+</div>
+</div>
+</div> <!-- .stats-player-summary -->
+    </div>
+
+    <div class="row">
+      <div class="columns / small-12 / section-view-overlay">
+        <nav-dropdown data-alpha="player" data-beta="stats-profile" data-gamma="" data-route-id="" data-sections="availableStats">
+
+  <nav class="tertiary-nav">
+
+    <section class="tertiary-nav-component">
+      <div class="toggle-nav-component__button" ng-click="showBeta=!showBeta; showGamma=false;" role="button" tabindex="0">
+        <a href="" ng-class="{ active: showBeta }">Profile</a>
+      </div>
+      <ul class="tertiary-nav-component__dropdown ng-hide" ng-show="showBeta" aria-hidden="true">
+        <li ng-show="sections.stats" aria-hidden="true" class="ng-hide"><a data-type-beta="stats-profile" ng-href="/player/#!//" href="/player/#!//"><span>Profile</span></a></li>
+        <li ng-show="sections.stats" aria-hidden="true" class="ng-hide"><a data-type-beta="splits" ng-href="/player/#!//traditional" href="/player/#!//traditional"><span>Splits</span></a></li>
+        <li ng-show="sections.current" aria-hidden="true" class="ng-hide"><a data-type-beta="news" ng-href="/player/#!//news" href="/player/#!//news"><span>News</span></a></li>
+        <li ng-show="sections.current" aria-hidden="true" class="ng-hide"><a data-type-beta="fantasy" ng-href="/player/#!//fantasy" href="/player/#!//fantasy"><span>Fantasy</span></a></li>
+        <li><a data-type-beta="career" ng-href="/player/#!//career" href="/player/#!//career"><span>Career</span></a></li>
+
+        <li ng-show="sections.boxscores &amp;&amp; sections.boxscoreFlag>=2" aria-hidden="true" class="ng-hide"><a data-type-beta="boxscores" ng-href="/player/#!//boxscores" href="/player/#!//boxscores"><span>Box Scores</span></a></li>
+        <li ng-show="sections.boxscores &amp;&amp; sections.boxscoreFlag<=2" aria-hidden="true" class="ng-hide"><a data-type-beta="adv-boxscores" ng-href="/player/#!//boxscores-traditional" href="/player/#!//boxscores-traditional"><span>Advanced Box Scores</span></a></li>
+
+        <li ng-show="sections.tracking" aria-hidden="true" class="ng-hide"><a data-type-beta="tracking" ng-href="/player/#!//shots-dash" href="/player/#!//shots-dash"><span>Tracking</span></a></li>
+      </ul>
+    </section>
+
+    <section class="tertiary-nav-component ng-hide" ng-show="beta==='splits'" aria-hidden="true">
+      <div class="toggle-nav-component__button" ng-click="showGamma=!showGamma; showBeta=false;" role="button" tabindex="0">
+        <a href="" ng-class="{ active: showGamma }"></a>
+      </div>
+      <ul class="tertiary-nav-component__dropdown ng-hide" ng-show="showGamma" aria-hidden="true">
+        <li><a data-type-gamma="traditional" ng-href="/player/#!//traditional" href="/player/#!//traditional"><span>Traditional</span></a></li>
+        <li><a data-type-gamma="advanced" ng-href="/player/#!//advanced" href="/player/#!//advanced"><span>Advanced</span></a></li>
+        <li><a data-type-gamma="misc" ng-href="/player/#!//misc" href="/player/#!//misc"><span>Misc</span></a></li>
+        <li><a data-type-gamma="scoring" ng-href="/player/#!//scoring" href="/player/#!//scoring"><span>Scoring</span></a></li>
+        <li><a data-type-gamma="usage" ng-href="/player/#!//usage" href="/player/#!//usage"><span>Usage</span></a></li>
+        <li><a data-type-gamma="shooting" ng-href="/player/#!//shooting" href="/player/#!//shooting"><span>Shooting</span></a></li>
+      </ul>
+    </section>
+
+    <section class="tertiary-nav-component ng-hide" ng-show="beta==='tracking'" aria-hidden="true">
+      <div class="toggle-nav-component__button" ng-click="showGamma=!showGamma; showBeta=false;" role="button" tabindex="0">
+        <a href="" ng-class="{ active: showGamma }"></a>
+      </div>
+      <ul class="tertiary-nav-component__dropdown ng-hide" ng-show="showGamma" aria-hidden="true">
+        <li><a data-type-gamma="shot-dash" ng-href="/player/#!//shots-dash" href="/player/#!//shots-dash"><span>Shots Dashboard</span></a></li>
+        <li><a data-type-gamma="reb-dash" ng-href="/player/#!//rebounds-dash" href="/player/#!//rebounds-dash"><span>Rebounds Dashboard</span></a></li>
+        <li><a data-type-gamma="passes-dash" ng-href="/player/#!//passes-dash" href="/player/#!//passes-dash"><span>Passes Dashboard</span></a></li>
+        <li><a data-type-gamma="def-dash" ng-href="/player/#!//defense-dash" href="/player/#!//defense-dash"><span>Defense Dashboard</span></a></li>
+      </ul>
+    </section>
+
+    <section class="tertiary-nav-component ng-hide" ng-show="beta==='adv-boxscores'" aria-hidden="true">
+      <div class="toggle-nav-component__button" ng-click="showGamma=!showGamma;showBeta=false;" role="button" tabindex="0">
+        <a href="" ng-class="{ active: showGamma }"></a>
+      </div>
+      <ul class="tertiary-nav-component__dropdown ng-hide" ng-show="showGamma" aria-hidden="true">
+        <li><a data-type-gamma="traditional" ng-href="/player/#!//boxscores-traditional" href="/player/#!//boxscores-traditional"><span>Traditional</span></a></li>
+        <li><a data-type-gamma="advanced" ng-href="/player/#!//boxscores-advanced" href="/player/#!//boxscores-advanced"><span>Advanced</span></a></li>
+        <li><a data-type-gamma="misc" ng-href="/player/#!//boxscores-misc" href="/player/#!//boxscores-misc"><span>Misc</span></a></li>
+        <li><a data-type-gamma="scoring" ng-href="/player/#!//boxscores-scoring" href="/player/#!//boxscores-scoring"><span>Scoring</span></a></li>
+        <li><a data-type-gamma="usage" ng-href="/player/#!//boxscores-usage" href="/player/#!//boxscores-usage"><span>Usage</span></a></li>
+      </ul>
+    </section>
+
+    <section class="tertiary-nav-component">
+      <div class="toggle-nav-component__caret">
+        <i class="fa fa-caret-down" aria-hidden="true"></i>
+      </div>
+    </section>
+
+  </nav>
+
+  <section class="columns / small-12 / tertiary-nav-overlay" ng-class="{ active: showBeta || showGamma }"></section>
+
+</nav-dropdown>
+        <!----><div ng-view=""><div ng-controller="PlayerStatsProfileController" class="stats-splits player-view" data-cat="stats-profile">
+
+  <div class="row row5 collapse stats-filters-top">
+    <div class="columns large-1 end"><div stats-filter-select="" split="splits.SeasonType" autorun="true" class="stats-filter-select"><div class="inner" ng-class="{toggled: (split.selected.val!=split.default)}">   <label>     <div class="label"></div>     <div class="reset" ng-click="resetSplit();" role="button" tabindex="0"><i class="fa fa-times" aria-hidden="true"></i></div>     <select name="" ng-model="split.selected" ng-change="setSplit(split.selected)" ng-options="v.text for v in split.options" class="ng-pristine ng-untouched ng-valid ng-empty" aria-invalid="false"><option value="?" selected="selected"></option></select>   </label></div></div></div>
+  </div>
+
+  <div class="stats-filters-advanced ng-hide" ng-show="showSplits" aria-hidden="true">
+    <div class="stats-filters-advanced__bottom">
+      <stats-run-it><a href="" class="run-it" ripple="" ng-click="runit();">Run It</a></stats-run-it>
+    </div>
+  </div>
+
+  <!-- traditional -->
+
+  <div class="row nba-m-t-1 nba-m-b-1">
+    <div class="columns medium-6">
+    </div>
+    <div class="columns medium-6 text-right">
+      <stats-glossary-toggle toggle="showGlossaryTraditional" class="stats-glossary-toggle"> <a class="stats-glossary-toggle__link" ng-class="{'stats-glossary-toggle__link--opened':toggle}" ng-click="toggle=!toggle;">   <i class="fa fa-book" aria-hidden="true"></i> Glossary </a></stats-glossary-toggle>
+      <stats-share-button data-title="" class="stats-share-button"> <a class="stats-share-button__link" ng-class="{'stats-share-button__link--opened':vm.showSharePanel}" ng-click="vm.showSharePanel = !vm.showSharePanel;">   <i class="fa fa-share-alt" aria-hidden="true"></i> Share </a> <div class="stats-share-button__panel ng-hide" ng-show="vm.showSharePanel" aria-hidden="true">   <div class="stats-share-button__inner">     <span class="stats-share-button__label">Share on:</span>     <a class="stats-share-button__icon" target="_blank" rel="noopener nofollow" href="http://www.facebook.com/sharer/sharer.php?u=&amp;title="><i class="fa fa-facebook"></i></a>     <a class="stats-share-button__icon" target="_blank" rel="noopener nofollow" href="https://twitter.com/intent/tweet?url=&amp;via=nbastats&amp;text="><i class="fa fa-twitter"></i></a>     <input class="stats-share-button__text-input" ng-value="vm.url" type="text">   </div> </div></stats-share-button>
+    </div>
+  </div>
+
+  <div class="stats-glossary ng-hide" ng-show="showGlossaryTraditional" aria-hidden="true">
+    <dl>
+      <dt>GP</dt>
+      <dd>Games Played</dd>
+      <dt>MIN</dt>
+      <dd>Minutes Played</dd>
+      <dt>FGM</dt>
+      <dd>Field Goals Made</dd>
+      <dt>FGA</dt>
+      <dd>Field Goals Attempted</dd>
+      <dt>FG%</dt>
+      <dd>Field Goal Percentage</dd>
+      <dt>3PM</dt>
+      <dd>3 Point Field Goals Made</dd>
+      <dt>3PA</dt>
+      <dd>3 Point Field Goals Attempted</dd>
+      <dt>3P%</dt>
+      <dd>3 Point Field Goals Percentage</dd>
+      <dt>FTM</dt>
+      <dd>Free Throws Made</dd>
+      <dt>FTA</dt>
+      <dd>Free Throws Attempted</dd>
+      <dt>FT%</dt>
+      <dd>Free Throw Percentage</dd>
+      <dt>OREB</dt>
+      <dd>Offensive Rebounds</dd>
+      <dt>DREB</dt>
+      <dd>Defensive Rebounds</dd>
+      <dt>REB</dt>
+      <dd>Rebounds</dd>
+      <dt>AST</dt>
+      <dd>Assists</dd>
+      <dt>TOV</dt>
+      <dd>Turnovers</dd>
+      <dt>STL</dt>
+      <dd>Steals</dd>
+      <dt>BLK</dt>
+      <dd>Blocks</dd>
+      <dt>PF</dt>
+      <dd>Personal Fouls</dd>
+      <dt>DD2</dt>
+      <dd>Double Doubles</dd>
+      <dt>TD3</dt>
+      <dd>Trible Doubles</dd>
+      <dt>PTS</dt>
+      <dd>Points</dd>
+      <dt>+/-</dt>
+      <dd>Plus Minus</dd>
+    </dl>
+  </div>
+
+  <div class="nba-stat-table__caption">
+    <a href="/player/#!//traditional/">Traditional Splits <i class="fa fa-share" aria-hidden="true"></i></a>
+  </div>
+  <div stats-no-data-msg="datasets.Base.noData &amp;&amp; !datasets.Base.isLoading"><!----><!----></div>
+  <div stats-loader="datasets.Base.isLoading"><!----></div>
+  <!----><nba-stat-table ng-if="!datasets.Base.isLoading &amp;&amp; !datasets.Base.noData" rows="datasets.Base.sets[1].rows" params="params" filters="filters" ai="ai" template="player/player-traditional"><div stats-table-pagination="" data-location="top" class="stats-table-pagination"><!----></div><!---->
+<div class="nba-stat-table">
+  <div class="nba-stat-table__overflow" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"></th>
+          <!----><th class="text" data-field="TEAM_ABBREVIATION" ng-if="ai.showTeamCol">TEAM</th><!---->
+          <th sort="" cf="" data-field="GP" ripple="">GP</th>
+          <th sort="" cf="" data-field="MIN" ripple="">MIN</th>
+          <th sort="" cf="" data-field="PTS" ripple="">PTS</th>
+          <th sort="" cf="" data-field="FGM" ripple="">FGM</th>
+          <th sort="" cf="" data-field="FGA" ripple="">FGA</th>
+          <th sort="" cf="" data-field="FG_PCT" ripple="">FG%</th>
+          <th sort="" cf="" data-field="FG3M" ripple="">3PM</th>
+          <th sort="" cf="" data-field="FG3A" ripple="">3PA</th>
+          <th sort="" cf="" data-field="FG3_PCT" ripple="">3P%</th>
+          <th sort="" cf="" data-field="FTM" ripple="">FTM</th>
+          <th sort="" cf="" data-field="FTA" ripple="">FTA</th>
+          <th sort="" cf="" data-field="FT_PCT" ripple="">FT%</th>
+          <th sort="" cf="" data-field="OREB" ripple="">OREB</th>
+          <th sort="" cf="" data-field="DREB" ripple="">DREB</th>
+          <th sort="" cf="" data-field="REB" ripple="">REB</th>
+          <th sort="" cf="" data-field="AST" ripple="">AST</th>
+          <th sort="" cf="" data-field="TOV" ripple="">TOV</th>
+          <th sort="" cf="" data-field="STL" ripple="">STL</th>
+          <th sort="" cf="" data-field="BLK" ripple="">BLK</th>
+          <th sort="" cf="" data-field="PF" ripple="">PF</th>
+          <th sort="" cf="" data-field="DD2" ripple="">DD2</th>
+          <th sort="" cf="" data-field="TD3" ripple="">TD3</th>
+          <th sort="" cf="" data-field="PLUS_MINUS" ripple="">+/-</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"></th>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<div stats-table-pagination="" data-location="bottom" class="stats-table-pagination"><!----></div></nba-stat-table><!---->
+  <br>
+
+
+  <!-- advanced -->
+
+  <div class="row nba-m-t-1 nba-m-b-1">
+    <div class="columns medium-6">
+    </div>
+    <div class="columns medium-6 text-right">
+      <stats-glossary-toggle toggle="showGlossaryAdvanced" class="stats-glossary-toggle"> <a class="stats-glossary-toggle__link" ng-class="{'stats-glossary-toggle__link--opened':toggle}" ng-click="toggle=!toggle;">   <i class="fa fa-book" aria-hidden="true"></i> Glossary </a></stats-glossary-toggle>
+    </div>
+  </div>
+
+  <div class="stats-glossary ng-hide" ng-show="showGlossaryAdvanced" aria-hidden="true">
+    <dl>
+      <dt>OffRtg</dt>
+      <dd>Offensive Rating</dd>
+      <dt>DefRtg</dt>
+      <dd>Defensive Rating</dd>
+      <dt>NetRtg</dt>
+      <dd>Net Rating</dd>
+      <dt>AST%</dt>
+      <dd>Assist Percentage</dd>
+      <dt>AST/TO</dt>
+      <dd>Assist to Turnover Ratio</dd>
+      <dt>AST Ratio</dt>
+      <dd>Assist Ratio</dd>
+      <dt>OREB%</dt>
+      <dd>Offensive Rebounding Percentage</dd>
+      <dt>DREB%</dt>
+      <dd>Defensive Rebound Percentage</dd>
+      <dt>REB%</dt>
+      <dd>Rebound Percentage</dd>
+      <dt>TO Ratio</dt>
+      <dd>Team Turnover Percentage</dd>
+      <dt>eFG%</dt>
+      <dd>Effective Field Goal Percentage</dd>
+      <dt>TS%</dt>
+      <dd>True Shooting Percentage</dd>
+      <dt>USG%</dt>
+      <dd>Usage Percentage</dd>
+      <dt>PACE</dt>
+      <dd>Pace Factor</dd>
+      <dt>PIE</dt>
+      <dd>Player Impact Estimate</dd>
+    </dl>
+  </div>
+
+  <div class="nba-stat-table__caption">
+    <a href="/player/#!//advanced/">Advanced Splits <i class="fa fa-share" aria-hidden="true"></i></a>
+  </div>
+  <div stats-no-data-msg="datasets.Advanced.noData &amp;&amp; !datasets.Advanced.isLoading"><!----><!----></div>
+  <div stats-loader="datasets.Advanced.isLoading"><!----></div>
+  <!----><nba-stat-table ng-if="!datasets.Advanced.isLoading &amp;&amp; !datasets.Advanced.noData" rows="datasets.Advanced.sets[1].rows" params="params" filters="filters" ai="ai" template="player/player-advanced"><div stats-table-pagination="" data-location="top" class="stats-table-pagination"><!----></div><!---->
+<div class="nba-stat-table">
+  <div class="nba-stat-table__overflow" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"><br></th>
+          <!----><th class="text" data-field="TEAM_ABBREVIATION" ng-if="ai.showTeamCol">TEAM</th><!---->
+          <th sort="" cf="" data-field="GP" ripple="">GP</th>
+          <th sort="" cf="" data-field="MIN" ripple="">MIN</th>
+          <th sort="" cf="" data-field="OFF_RATING" ripple="">OffRtg</th>
+          <th sort="" cf="" data-field="DEF_RATING" ripple="">DefRtg</th>
+          <th sort="" cf="" data-field="NET_RATING" ripple="">NetRtg</th>
+          <th sort="" cf="" data-field="AST_PCT" ripple="">AST%</th>
+          <th sort="" cf="" data-field="AST_TO" ripple="">AST/TO</th>
+          <th sort="" cf="" data-field="AST_RATIO" ripple="">AST Ratio</th>
+          <th sort="" cf="" data-field="OREB_PCT" ripple="">OREB%</th>
+          <th sort="" cf="" data-field="DREB_PCT" ripple="">DREB%</th>
+          <th sort="" cf="" data-field="REB_PCT" ripple="">REB%</th>
+          <th sort="" cf="" data-field="TM_TOV_PCT" ripple="">TO Ratio</th>
+          <th sort="" cf="" data-field="EFG_PCT" ripple="">eFG%</th>
+          <th sort="" cf="" data-field="TS_PCT" ripple="">TS%</th>
+          <th sort="" cf="" data-field="USG_PCT" ripple="">USG%</th>
+          <th sort="" cf="" data-field="PACE" ripple="">PACE</th>
+          <th sort="" cf="" data-field="PIE" ripple="">PIE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"><br></th>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<div stats-table-pagination="" data-location="bottom" class="stats-table-pagination"><!----></div></nba-stat-table><!---->
+  <br>
+
+
+  <!-- Misc -->
+
+  <div class="row nba-m-t-1 nba-m-b-1">
+    <div class="columns medium-6">
+    </div>
+    <div class="columns medium-6 text-right">
+      <stats-glossary-toggle toggle="showGlossaryMisc" class="stats-glossary-toggle"> <a class="stats-glossary-toggle__link" ng-class="{'stats-glossary-toggle__link--opened':toggle}" ng-click="toggle=!toggle;">   <i class="fa fa-book" aria-hidden="true"></i> Glossary </a></stats-glossary-toggle>
+    </div>
+  </div>
+
+  <div class="stats-glossary ng-hide" ng-show="showGlossaryMisc" aria-hidden="true">
+    <dl>
+      <dt>PTS OFF TO</dt>
+      <dd>Points off Turnover</dd>
+      <dt>2nd PTS</dt>
+      <dd>Second Chance Points</dd>
+      <dt>FBPs</dt>
+      <dd>Fast Break Points</dd>
+      <dt>PITP</dt>
+      <dd>Points in the Paint</dd>
+      <dt>Opp PTS OFF TO</dt>
+      <dd>Opponent Points Off Turnover</dd>
+      <dt>Opp 2nd PTS</dt>
+      <dd>Opponent 2nd Chance Points</dd>
+      <dt>Opp FBPs</dt>
+      <dd>Opponent Fast Break Points</dd>
+      <dt>Opp PITP</dt>
+      <dd>Opponent Points in the Paint</dd>
+      <dt>BLKA</dt>
+      <dd>Blocked Field Goal Attempts</dd>
+      <dt>PFD</dt>
+      <dd>Personal Fouls Drawn</dd>
+    </dl>
+  </div>
+
+  <div class="nba-stat-table__caption">
+    <a href="/player/#!//misc/">Misc Splits <i class="fa fa-share" aria-hidden="true"></i></a>
+  </div>
+  <div stats-no-data-msg="datasets.Misc.noData &amp;&amp; !datasets.Misc.isLoading"><!----><!----></div>
+  <div stats-loader="datasets.Misc.isLoading"><!----></div>
+  <!----><nba-stat-table ng-if="!datasets.Misc.isLoading &amp;&amp; !datasets.Misc.noData" rows="datasets.Misc.sets[1].rows" params="params" filters="filters" ai="ai" template="player/player-misc"><div stats-table-pagination="" data-location="top" class="stats-table-pagination"><!----></div><!---->
+<div class="nba-stat-table">
+  <div class="nba-stat-table__overflow" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"><br></th>
+          <!----><th class="text" data-field="TEAM_ABBREVIATION" ng-if="ai.showTeamCol">TEAM</th><!---->
+          <th sort="" cf="" data-field="GP" ripple="">GP</th>
+          <th sort="" cf="" data-field="MIN" ripple="">MIN</th>
+          <th sort="" cf="" data-field="PTS_OFF_TOV" ripple="">PTS&nbsp;OFF&nbsp;TO</th>
+          <th sort="" cf="" data-field="PTS_2ND_CHANCE" ripple="">2nd&nbsp;PTS</th>
+          <th sort="" cf="" data-field="PTS_FB" ripple="">FBPs</th>
+          <th sort="" cf="" data-field="PTS_PAINT" ripple="">PITP</th>
+          <th sort="" cf="" data-field="OPP_PTS_OFF_TOV" ripple="">Opp<br>PTS&nbsp;OFF&nbsp;TO</th>
+          <th sort="" cf="" data-field="OPP_PTS_2ND_CHANCE" ripple="">Opp<br>2nd&nbsp;PTS</th>
+          <th sort="" cf="" data-field="OPP_PTS_FB" ripple="">Opp<br>FBPs</th>
+          <th sort="" cf="" data-field="OPP_PTS_PAINT" ripple="">Opp<br>PITP</th>
+          <th sort="" cf="" data-field="BLK" ripple="">BLK</th>
+          <th sort="" cf="" data-field="BLKA" ripple="">BLKA</th>
+          <th sort="" cf="" data-field="PF" ripple="">PF</th>
+          <th sort="" cf="" data-field="PFD" ripple="">PFD</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"><br></th>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<div stats-table-pagination="" data-location="bottom" class="stats-table-pagination"><!----></div></nba-stat-table><!---->
+  <br>
+
+
+  <!-- Scoring -->
+
+  <div class="row nba-m-t-1 nba-m-b-1">
+    <div class="columns medium-6">
+    </div>
+    <div class="columns medium-6 text-right">
+      <stats-glossary-toggle toggle="showGlossaryScoring" class="stats-glossary-toggle"> <a class="stats-glossary-toggle__link" ng-class="{'stats-glossary-toggle__link--opened':toggle}" ng-click="toggle=!toggle;">   <i class="fa fa-book" aria-hidden="true"></i> Glossary </a></stats-glossary-toggle>
+    </div>
+  </div>
+
+  <div class="stats-glossary ng-hide" ng-show="showGlossaryScoring" aria-hidden="true">
+    <dl>
+      <dt>%FGA 2PT</dt>
+      <dd>Percent of Field Goals Attempted (2-Pointers)</dd>
+      <dt>%FGA 3PT</dt>
+      <dd>Percent of Field Goals Attempted (3-Pointers)</dd>
+      <dt>%PTS 2PT</dt>
+      <dd>Percent of Points (2-Pointers)</dd>
+      <dt>%PTS 2PT-MR</dt>
+      <dd>Percent of Points (Mid-Range)</dd>
+      <dt>%PTS 3PT</dt>
+      <dd>Percent of Points (3 Pointers)</dd>
+      <dt>%PTS FBPs</dt>
+      <dd>Percent of Points (Fast Break Points)</dd>
+      <dt>%PTS FT</dt>
+      <dd>Percent of Points (Free Throws)</dd>
+      <dt>%PTS OffTo</dt>
+      <dd>Percent of Points (Off Turnovers)</dd>
+      <dt>%PTS (PITP)</dt>
+      <dd>Percent of Points (Points in the Paint)</dd>
+      <dt>2FGM %AST</dt>
+      <dd>Percent of 2 Point Field Goals Made Assisted</dd>
+      <dt>2FGM %UAST</dt>
+      <dd>Percent of 2 Point Field Goals Made Unassisted</dd>
+      <dt>3FGM %AST</dt>
+      <dd>Percent of 3 Point Field Goals Made Assisted</dd>
+      <dt>3FGM %UAST</dt>
+      <dd>Percent of 3 Point Field Goals Made Unassisted</dd>
+      <dt>FGM %AST</dt>
+      <dd>Percent of Field Goals Made Assisted</dd>
+      <dt>FGM %UAST</dt>
+      <dd>Percent of Field Goals Made Unassisted</dd>
+    </dl>
+  </div>
+
+  <div class="nba-stat-table__caption">
+    <a href="/player/#!//scoring/">Scoring Splits <i class="fa fa-share" aria-hidden="true"></i></a>
+  </div>
+  <div stats-no-data-msg="datasets.Scoring.noData &amp;&amp; !datasets.Scoring.isLoading"><!----><!----></div>
+  <div stats-loader="datasets.Scoring.isLoading"><!----></div>
+  <!----><nba-stat-table ng-if="!datasets.Scoring.isLoading &amp;&amp; !datasets.Scoring.noData" rows="datasets.Scoring.sets[1].rows" params="params" filters="filters" ai="ai" template="player/player-scoring"><div stats-table-pagination="" data-location="top" class="stats-table-pagination"><!----></div><!---->
+<div class="nba-stat-table">
+  <div class="nba-stat-table__overflow" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"><br></th>
+          <!----><th class="text" data-field="TEAM_ABBREVIATION" ng-if="ai.showTeamCol">TEAM</th><!---->
+          <th sort="" cf="" data-field="GP" ripple="">GP</th>
+          <th sort="" cf="" data-field="MIN" ripple="">MIN</th>
+          <th sort="" cf="" data-field="PCT_FGA_2PT" ripple="">%FGA<br>2PT</th>
+          <th sort="" cf="" data-field="PCT_FGA_3PT" ripple="">%FGA<br>3PT</th>
+          <th sort="" cf="" data-field="PCT_PTS_2PT" ripple="">%PTS<br>2PT</th>
+          <th sort="" cf="" data-field="PCT_PTS_2PT_MR" ripple="">%PTS<br>2PT&nbsp;MR</th>
+          <th sort="" cf="" data-field="PCT_PTS_3PT" ripple="">%PTS<br>3PT</th>
+          <th sort="" cf="" data-field="PCT_PTS_FB" ripple="">%PTS<br>FBPs</th>
+          <th sort="" cf="" data-field="PCT_PTS_FT" ripple="">%PTS<br>FT</th>
+          <th sort="" cf="" data-field="PCT_PTS_OFF_TOV" ripple="">%PTS<br>OffTO</th>
+          <th sort="" cf="" data-field="PCT_PTS_PAINT" ripple="">%PTS<br>PITP</th>
+          <th sort="" cf="" data-field="PCT_AST_2PM" ripple="">2FGM<br>%AST</th>
+          <th sort="" cf="" data-field="PCT_UAST_2PM" ripple="">2FGM<br>%UAST</th>
+          <th sort="" cf="" data-field="PCT_AST_3PM" ripple="">3FGM<br>%AST</th>
+          <th sort="" cf="" data-field="PCT_UAST_3PM" ripple="">3FGM<br>%UAST</th>
+          <th sort="" cf="" data-field="PCT_AST_FGM" ripple="">FGM<br>%AST</th>
+          <th sort="" cf="" data-field="PCT_UAST_FGM" ripple="">FGM<br>%UAST</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"><br></th>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<div stats-table-pagination="" data-location="bottom" class="stats-table-pagination"><!----></div></nba-stat-table><!---->
+  <br>
+
+
+  <!-- Usage -->
+
+  <div class="row nba-m-t-1 nba-m-b-1">
+    <div class="columns medium-6">
+    </div>
+    <div class="columns medium-6 text-right">
+      <stats-glossary-toggle toggle="showGlossaryUsage" class="stats-glossary-toggle"> <a class="stats-glossary-toggle__link" ng-class="{'stats-glossary-toggle__link--opened':toggle}" ng-click="toggle=!toggle;">   <i class="fa fa-book" aria-hidden="true"></i> Glossary </a></stats-glossary-toggle>
+    </div>
+  </div>
+
+  <div class="stats-glossary ng-hide" ng-show="showGlossaryUsage" aria-hidden="true">
+    <dl>
+      <dt>USG%</dt>
+      <dd>Usage Percentage</dd>
+      <dt>%FGM</dt>
+      <dd>Percent of Team's Field Goals Made</dd>
+      <dt>%FGA</dt>
+      <dd>Percent of Team's Field Goals Attempted</dd>
+      <dt>%3PM</dt>
+      <dd>Percent of Team's 3 Point Field Goals Made</dd>
+      <dt>%3PA</dt>
+      <dd>Percent of Team's 3 Point Field Goals Attempted</dd>
+      <dt>%FTM</dt>
+      <dd>Percent of Team's Free Throws Made</dd>
+      <dt>%FTA</dt>
+      <dd>Percent of Team's Free Throws Attempted</dd>
+      <dt>%OREB</dt>
+      <dd>Percent of Team's Offensive Rebounds</dd>
+      <dt>%DREB</dt>
+      <dd>Percent of Team's Defensive Rebounds</dd>
+      <dt>%REB</dt>
+      <dd>Percent of Team's Rebounds</dd>
+      <dt>%AST</dt>
+      <dd>Percent of Team's Assists</dd>
+      <dt>%TOV</dt>
+      <dd>Percent of Team's Turnovers</dd>
+      <dt>%STL</dt>
+      <dd>Percent of Team's Steals</dd>
+      <dt>%BLK</dt>
+      <dd>Percent of Team's Blocks</dd>
+      <dt>%BLKA</dt>
+      <dd>Percent of Team's Blocked Field Goal Attempts</dd>
+      <dt>%PF</dt>
+      <dd>Percent of Team's Personal Fouls</dd>
+      <dt>%PFD</dt>
+      <dd>Percent of Team's Personal Fouls Drawn</dd>
+      <dt>%PTS</dt>
+      <dd>Percent of Team's Points</dd>
+    </dl>
+  </div> <!-- .stats-glossary -->
+
+  <div class="nba-stat-table__caption">
+    <a href="/player/#!//usage/">Usage Splits <i class="fa fa-share" aria-hidden="true"></i></a>
+  </div>
+  <div stats-no-data-msg="datasets.Usage.noData &amp;&amp; !datasets.Usage.isLoading"><!----><!----></div>
+  <div stats-loader="datasets.Usage.isLoading"><!----></div>
+  <!----><nba-stat-table ng-if="!datasets.Usage.isLoading &amp;&amp; !datasets.Usage.noData" rows="datasets.Usage.sets[1].rows" params="params" filters="filters" ai="ai" template="player/player-usage"><div stats-table-pagination="" data-location="top" class="stats-table-pagination"><!----></div><!---->
+<div class="nba-stat-table">
+  <div class="nba-stat-table__overflow" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"></th>
+          <!----><th class="text" data-field="TEAM_ABBREVIATION" ng-if="ai.showTeamCol">TEAM</th><!---->
+          <th sort="" cf="" data-field="GP" ripple="">GP</th>
+          <th sort="" cf="" data-field="MIN" ripple="">MIN</th>
+          <th sort="" cf="" class="nobr" data-field="USG_PCT" ripple="">USG%</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_FGM" ripple="">%FGM</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_FGA" ripple="">%FGA</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_FG3M" ripple="">%3PM</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_FG3A" ripple="">%3PA</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_FTM" ripple="">%FTM</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_FTA" ripple="">%FTA</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_OREB" ripple="">%OREB</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_DREB" ripple="">%DREB</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_REB" ripple="">%REB</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_AST" ripple="">%AST</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_TOV" ripple="">%TOV</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_STL" ripple="">%STL</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_BLK" ripple="">%BLK</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_BLKA" ripple="">%BLKA</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_PF" ripple="">%PF</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_PFD" ripple="">%PFD</th>
+          <th sort="" cf="" class="nobr" data-field="PCT_PTS" ripple="">%PTS</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div> <!-- .stat-table__overflow -->
+<div class="nba-stat-table__overlay" data-fixed="1" role="grid">
+    <table>
+      <thead>
+        <tr>
+          <th class="first" data-field="rows[0].GROUP_SET"></th>
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+        <!---->
+      </tbody>
+    </table>
+  </div></div> <!-- .nba-stat-table -->
+<div stats-table-pagination="" data-location="bottom" class="stats-table-pagination"><!----></div></nba-stat-table><!---->
+  <br>
+
+
+
+
+</div> <!-- .stats-splits -->
+</div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+
+      </div> <!-- .stats-container__inner -->
+
+    </main> <!-- .stats-container -->
+
+    <footer>
+      <div class="footer nba-footer" id="nbaGlobalFooter">
+  <p>Copyright © <em class="placeholder">2017</em> NBA Media Ventures, LLC. All rights reserved.</p>
+  <p><a href="http://www.nba.com/news/privacy_policy.html">Privacy Policy</a> | <a href="http://www.nba.com/news/termsofuse.html">Terms of Use</a> | <a id="nba_cnsnt_trst" class="nbaAdChoices" href="http://www.nba.com/adchoices" target="_blank" rel="noopener nofollow">Ad Choices</a></p>
+  <p>NBA.com is part of Turner Sports Digital, part of the Turner Sports &amp; Entertainment Digital Network.</p><img alt="Turner Broadcasting System, Inc. A Time Warner Company." src="//i.cdn.turner.com/nba/nba/footer/turner_logo_200x35.png">
+</div>
+          </footer>
+
+    
+
+  
+
+
+  
+
+  
+
+  
+      
+      
+    
+
+
+  
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script><script type="text/javascript" async="" src="http://ssl.cdn.turner.com/ads/adfuel/modules/dhtmlxgrid.js"></script><script type="text/javascript" async="" src="http://ssl.cdn.turner.com/ads/adfuel/modules/keypress.js"></script><script type="text/javascript" src="http://www.googletagservices.com/tag/js/gpt.js"></script><script type="text/javascript" async="" src="http://cdn.krxd.net/controltag?confid=ITcATbN4"></script><script type="text/javascript" async="" src="//www.ugdturner.com/xd.sjs"></script><script type="text/javascript" async="" src="http://c.amazon-adsystem.com/aax2/amzn_ads.js"></script><script async="" src="//c.amazon-adsystem.com/aax2/apstag.js"></script><script>
+      window.esi_ = {
+        country: "IN",
+        tz: "GMT+5.50",
+        region: "MH",
+        browser: "MOZILLA",
+        nbarid: "16",
+        nbarn: "India"
+      };
+    </script>
+  
+    
+  
+    
+  <script src="/js/data/ptsd/stats_ptsd.js"></script>
+  <script src="/scripts/theme.min.js"></script>
+
+    
+<!-- turner ad tag includes -->
+<script src="http://i.cdn.turner.com/ads/adfuel/ais/nba2-ais.js"></script><script type="text/javascript" async="" src="http://ads.rubiconproject.com/header/11078.js"></script>
+<script src="http://i.cdn.turner.com/ads/nba2/adfuel.js"></script>
+
+<script type="text/javascript">
+
+    //Set a listener for GPTRenderComplete Event
+    AdFuel.addEvent(document, 'GPTRenderComplete', function(event) {
+        if (event.detail && !event.detail.isEmpty) {
+            var detail = event.detail;
+            //If ad_bnr_atf_01 is 728x90, dispatch the global marketing slot
+            if (detail.pos[0] === 'bnr_atf_01' && detail.renderedSize[0] === 728 && detail.renderedSize[1] === 90) {
+                AdFuel.queueRegistry('//ssl.cdn.turner.com/ads/nba2/singles/nba_global_mktg.js', {
+                    dispatch: true,
+                });
+            }
+        }
+    });
+
+    //Dispatch nba_stats registry
+    AdFuel.queueRegistry('//i.cdn.turner.com/ads/nba2/nba_stats.js', {
+        dispatch: true
+    });
+
+</script>
+
+    
+<!-- GA and page tracking scripts -->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-86643645-1', 'auto');
+  ga('send', 'pageview');
+</script>
+<!-- /GA and page tracking scripts -->
+
+<!-- BEGIN: NBA analytics package snippet. -->
+<!-- Should be as close the the closing "body" tag as possible. -->
+<script id="_nbaScoutAnalytics" src="http://z.cdn.turner.com/nba/tmpl_asset/static/nba-cms3-base/latest/js/pkgAnalyticsScout-min.js"></script><script src="//z.cdn.turner.com/nba/tmpl_asset/static/nba-cms3-base/466/js/pkgAnalytics-min.js"></script>
+<script>
+
+  var hostname = window.location.hostname;
+  var accountIdOverride = "";
+  var nbaOmChannelPrefix = "";
+  nbaOmChannelPrefix="stats.nba.com";
+
+  //Set to use the omniture dev suite for our development hostnames, else prod
+  if (hostname === "dev.stats.nba.com" || hostname === "statsv3.nba.com" || hostname === "linuxpubstats.nba.com" || hostname == "linuxpubstatsdev.nba.com"){
+    accountIdOverride="nbag-n-league-dev";
+  }
+  else {
+    accountIdOverride="nbag-n-league";
+  }
+
+	_nba.analytics.setOverride("disableAutoPage",true);
+  _nba.analytics.setOverride("accountIds", accountIdOverride);
+
+	if (_nba && _nba.settings && _nba.settings.global) {
+	   _nba.settings.global.experience="responsive";
+	}
+</script>
+<!-- END: NBA analytics package snippet. -->
+
+
+<!--
+Start of DoubleClick Floodlight Tag: Please do not remove
+Activity name of this tag: 2017 Stats NBA
+URL of the webpage where the tag is expected to be placed: http://stats.nba.com/
+This tag must be placed between the <body> and </body> tags, as close as possible to the opening tag.
+Creation Date: 03/31/2017
+-->
+
+<!-- End of DoubleClick Floodlight Tag: Please do not remove -->
+
+
+<!-- SAP tracking pixel -->
+<img src="https://ad.doubleclick.net/ddm/ad/N69702.149455NBAMEDIAVENTURESLLC/B10791792.144215178;sz=1x1;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=?" alt="Advertisement" width="1" height="1" border="0">
+<!-- /SAP tracking pixel -->
+
+
+  
+
+<div class="kxhead" data-id="ITcATbN4" style="display:none !important;"><span class="kxtag kxinvisible" data-id="6"><script>
+(function() {
+  if (Krux('get', 'user') != null) {
+      new Image().src = 'https://usermatch.krxd.net/um/v2?partner=google';
+  }
+})();
+</script></span><span class="kxtag kxinvisible" data-id="23"><script>
+    (function() {
+        var kuid = Krux('get', 'user');
+        if (kuid) {
+            var prefix = location.protocol == 'https:' ? "https:" : "http:";
+            var bk_prefix = location.protocol == 'https:' ? "stags" : "tags";
+            var kurl_params = encodeURIComponent("_kuid=" + kuid + "&partner=bluekai&bk_uuid=$_BK_UUID");
+            var kurl = prefix + "//beacon.krxd.net/usermatch.gif?" + kurl_params;
+            var bk_params = 'id=' + kuid;
+            var bk_url = '//' + bk_prefix + '.bluekai.com/site/26357?' + bk_params + '&redir=' + kurl;
+            var i = new Image();
+            i.src = bk_url;
+        }
+    })();
+</script></span><span class="kxtag kxinvisible" data-id="49"><script>
+
+(function()
+{
+	var protocol = window.location.protocol == 'https:' ? 'https:' : 'http:';
+	var protocol1 = window.location.protocol == 'https:' ? 'https%3A' : 'http%3A';
+
+    new Image().src =protocol+"//bea4.v.fwmrm.net/ad/u?mode=echo&cr="+protocol1+"%2F%2Fbeacon.krxd.net%2Fusermatch.gif%3Fpartner%3Dfreewheel%26partner_uid%3D%23%7Buser.id%7D";
+})();
+
+</script></span><span class="kxtag kxinvisible" data-id="41"><script>
+(function(){
+   var kuid = Krux('get', 'user');
+   if (kuid) {
+	var prefix = window.location.protocol == 'https:' ? 'https:' : 'http:';
+	var url = prefix + '//dpm.demdex.net/ibs:dpid=66757&&dpuuid=' + kuid + '&redir=' + encodeURIComponent(prefix)+'%2F%2Fbeacon.krxd.net%2Fusermatch.gif%3Fpartner%3Dadobe%26partner_uid%3D${DD_UUID}';
+	new Image().src = url;
+  }
+
+})();
+</script></span><span class="kxtag kxinvisible" data-id="23409"><script>
+// this tag is intentionally blank
+</script></span><span class="kxtag kxinvisible" data-id="23410"></span><span class="kxtag kxinvisible" data-id="23412"><script type="text/javascript">Krux('social.init');</script></span><span class="kxtag kxinvisible" data-id="23430"><img style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/1010738507/?value=0&amp;guid=ON&amp;script=0" width="1" height="1"></span><span class="kxtag kxinvisible" data-id="23439"><img style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4uma&amp;p_id=Twitter" width="1" height="1"></span><span class="kxtag kxinvisible" data-id="23440"><img style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l4umb&amp;p_id=Twitter" width="1" height="1"></span><span class="kxtag kxinvisible" data-id="23445"><script>
+    var slot;
+    (function() {
+        if (window.googletag && googletag.pubads() && googletag.pubads().getSlots()) {
+            var c1 = {};
+            var arr = googletag.pubads().getSlots();
+            var site = ["br", "cnn", "cnn_arabic", "cnn_international", "cnn_money", "conan", "eSports", "espanol", "funnyordie", "hln", "nascar", "nba", "ncaa", "pga", "tbs", "tcm", "toonswim", "trutv"];
+
+            if (arr) {
+                for (var i = 0, l = arr.length; i < l; i++) {
+                    c1[arr[i].getAdUnitPath()] = (c1[arr[i].getAdUnitPath()] || 0) + 1;
+                }
+                slot = Object.keys(c1)[0] || null;
+                for (k in c1) slot = (c1[k] > c1[slot]) ? k : slot;
+            }
+
+            if (window.slot) { // Set string lowercase and split slot into an array 
+                slot = slot.toLowerCase();
+                slot = slot.split('/');
+
+                // Changes slot from "as" to "toonswim"
+                slot[2] = slot[2] == 'as' ? 'toonswim' : slot[2];
+                // Changes slot from "arabic" to "cnn_arabic"
+                slot[2] = slot[2] == 'arabic' ? 'cnn_arabic' : slot[2];
+                // Changes slot from "cnni" to "cnn_internation"
+                slot[2] = slot[2] == 'cnni' ? 'cnn_international' : slot[2];
+                // Changes slot from "cnnmoney" to "cnn_money"
+                slot[2] = slot[2] == 'cnnmoney' ? 'cnn_money' : slot[2];
+				
+				// "teamcoco"
+				if(slot[2] === "tbs" && slot[4] === "conan"){
+					slot = slot.splice(2)
+				};
+
+                for (var i = 0; i < site.length; i++) {
+
+                    if (slot[2] == site[i]) {
+                        // Using domain to dynamically scrape page attribute site 
+                        Krux('set', 'page_attr_' + slot[2] + '_site', slot[2]);
+                        // Using domain to dynamically scrape page attribute rollup
+                        Krux('set', 'page_attr_' + slot[2] + '_rollup', slot[3]);
+                        // Using domain to dynamically scrape page attribute section 
+                        Krux('set', 'page_attr_' + slot[2] + '_section', slot[4]);
+                        // Using domain to dynamically scrape page attribute subsection
+                        Krux('set', 'page_attr_' + slot[2] + '_subsection', slot[5]);
+                        // Using domain to dynamically scrape page attribute AdUnit 5 
+                        Krux('set', 'page_attr_' + slot[2] + '_adunit5', slot[6]);
+                        
+	
+                    };
+                };
+            };
+        };
+		
+		if(window.CNNMONEY && window.CNNMONEY.adTargets) spec = CNNMONEY.adTargets.spec;
+		if(window.CNN && window.CNN.adTargets) spec = CNN.adTargets.spec;
+		if(window.CNNI && window.CNNI.adTargets) spec = CNNI.adTargets.spec;
+						
+		if (window.spec && slot && slot.length >= 3) {
+           Krux('set', 'page_attr_' + slot[2] + '_spec', spec);
+        };
+		
+	
+		
+		
+        if (window.queryString) {
+            Krux('set', 'page_attr_on_site_searcher', true)
+        };
+
+
+        if (window.CNN && window.CNN.contentModel && window.CNN.contentModel.analytics) {
+            var ct = CNN.contentModel.analytics.cap_topics;
+            if (ct) {
+                ct = ct.replace(/ /g, '');
+                Krux('set', 'page_attr_cap_topics', ct);
+            };
+        };
+
+    })();
+</script></span><span class="kxtag kxinvisible" data-id="23461"><img style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4uma&amp;p_id=Twitter" width="1" height="1"></span><span class="kxtag kxinvisible" data-id="23462"><img style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l4umb&amp;p_id=Twitter" width="1" height="1"></span><span class="kxtag kxinvisible" data-id="23474"><script>
+(function() {
+
+    // Using Meta keywords to produce page attribute keywords
+    Krux('scrape', { "page_attr_keywords": {meta_name: "keywords"}});
+    // Using Cookie last5stocks to produce page attribute cookie_last5stocks
+    Krux('scrape', { "page_attr_cookie_last5stocks": {cookie: "last5stocks"}});
+
+    if (document.location.host.match("bleacherreport")) {
+        // Using Meta keywords to produce page attribute keywords
+        Krux('scrape', {"page_attr_bleacherreport_keywords": {meta_name: "keywords"}});
+        Krux('scrape', {"page_attr_bleacherreport_site": {javascript: "document.location.host.split('.')[0]"}});
+    }
+
+    if(window.slot) {
+        // get namespace;
+        var ns = (function() {
+                        var exceptions, jsmdmap, key1, key2, val1, val2, _ref;
+                        if (window._jsmd_default) {
+                            jsmdmap = _jsmd_default.map;
+                            for (key1 in jsmdmap) {
+                                val1 = jsmdmap[key1];
+                                for (key2 in val1) {
+                                    val2 = val1[key2];
+                                    if (ns = val2 != null ? (_ref = val2.settings) != null ? _ref.visitorNamespace : void 0 : void 0) {
+                                        return ns;
+                                    }
+                                }
+                            }
+                        }
+                        exceptions = {
+                            'NBA': '0_nbagroup',
+                            'Nascar': 'nascardigitalsap',
+                            'Bleacher Report': 'turnersidigital',
+                            'Teamcoco': '0_teamcoco'
+                        };
+                        return exceptions[Krux('get', 'site')];
+                })();
+
+        if(!ns) return;
+        //get site
+        var site = slot[2];
+        // get pixel
+        var pixel = window["s_i_" + ns] || window["s_i_1_" + ns] || window["s_i_0_" + ns];
+        // regex for pixel source
+        var lookFor = "&h1=(.*?)&";
+        // check if pixel source matches the regex
+        var match =  (pixel && pixel.src) ? pixel.src.match(lookFor) : null;
+
+        if (match) {
+            var parts = decodeURIComponent(match[1]).split('|');
+            var keys = ['lob', 'brand', 'bizunit', 'sitename', 'sitesectionlevel1', 'sitesectionlevel2'];
+            for (var i = 0, l = keys.length;i < l; i++) {
+                var key = keys[i];
+                if(parts[i]) Krux('set', "page_attr_" + site + "_" + key, parts[i]);
+            }
+        }
+    }
+
+})();
+</script></span><span class="kxtag kxinvisible" data-id="23477"><script>
+    (function() {
+        // To Pull GUID 
+        Krux('scrape', {
+            'user_attr_turner_guid': {
+                cookie: 'ug'
+            }
+        });
+
+        // To Pull Adobe Analytics ID 
+        adobeID = Krux('scrape.javascript', "Krux('scrape.cookie', 's_vi').split('|',2)[1].split('[')[0]");
+        if (window.adobeID) {
+            if (adobeID.length === 33 && adobeID.indexOf('-') != -1) {
+                Krux('set', 'user_attr_aa_id', adobeID);
+            };
+        };
+
+        // To Pull Backup Adobe Analytics ID
+        Krux('scrape', {
+            'user_attr_af_id': {
+                cookie: 's_fid'
+            }
+        });
+
+    })();
+</script></span><span class="kxtag kxinvisible" data-id="23511"></span><span class="kxtag kxinvisible" data-id="23548"></span><span class="kxtag kxinvisible" data-id="23619"><script>
+
+(function()
+{
+	var protocol = window.location.protocol == 'https:' ? 'https:' : 'http:';
+	var protocol1 = window.location.protocol == 'https:' ? 'https%3A' : 'http%3A';
+
+    new Image().src =protocol+"//bea4.v.fwmrm.net/ad/u?mode=echo&cr="+protocol1+"%2F%2Fbeacon.krxd.net%2Fusermatch.gif%3Fpartner%3Dfreewheel%26partner_uid%3D%23%7Buser.id%7D";
+})();
+
+</script></span><span class="kxtag kxinvisible" data-id="23636"><img style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/925133270/?value=1.00&amp;currency_code=USD&amp;label=yxtWCO6-3GcQ1tORuQM&amp;guid=ON&amp;script=0" width="1" height="1"></span><span class="kxtag kxinvisible" data-id="26137"><script>
+    (function() {
+        var kuid = Krux('get', 'user');
+        if (kuid) {
+            var prefix = location.protocol == 'https:' ? "https:" : "http:";
+            var kurl_params = encodeURIComponent("_kuid=" + kuid + "&_kdpid=4e3f8627-26fa-484d-bd95-a1f8f09d95a6&dlxid=<na_id>&dlxdata=<na_da>");
+            var kurl = prefix + "//beacon.krxd.net/data.gif?" + kurl_params;
+            var dlx_url = '//r.nexac.com/e/getdata.xgi?dt=br&pkey=quky68qukyi81&ru=' + kurl;
+            var i = new Image();
+            i.src = dlx_url;
+        }
+    })();
+</script>
+</span><span class="kxtag kxinvisible" data-id="26604"><script>
+(function(){
+var kxfbmap = {
+  'JLmLD3_1': '782589578427709',
+  'ITcBPihd':	'289259704582565',
+  'ITcA0tkB':	'1517553741888280',
+  'ITcA76Nx':	'1407388882899380',
+  'ITcAwecV':	'497430300356774',
+  'IWzDCwHo':	'418245194992316',
+  'ITcAsWsy':	'418245194992316',
+  'ITcATbN4':	'418245194992316',
+  'ITcAEoo6':	'177383419263866',
+  'ITb_4eqO':	'731697573629176',
+  'ITb9NmYG':   '596760543765088',
+  'ITb9Q03y':   '418245194992316',
+  'IWzCuclz':   '687168111412131'
+};
+
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','//connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', kxfbmap[Krux('get', 'confid')]);
+fbq('track', 'PageView');
+})();
+</script> </span></div><iframe id="google_osd_static_frame_3081325711300" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body><iframe id="kx-proxy-ITcATbN4" src="http://cdn.krxd.net/partnerjs/xdi/proxy.3d2100fd7107262ecb55ce6847f01fa5.html#!kxcid=ITcATbN4&amp;kxt=http%3A%2F%2Fstats.nba.com&amp;kxcl=cdn&amp;kxp=" style="display: none; visibility: hidden; height: 0; width: 0;"></iframe></html>
