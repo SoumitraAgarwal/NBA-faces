@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 import os
 
-base = 'Pictures/'
+base = 'Worked/'
 images = os.listdir(base)
 
 if("Center" not in os.listdir(".")):
