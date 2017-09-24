@@ -66,17 +66,17 @@ def correctposy(img, correction):
 	if(correction < 0):
 
 		add = np.zeros((1,img.shape[1], 3))
-		img = img[0:img.shape[1] - 1, :]
+		img = img[0:img.shape[0] - 1, :]
 		img = np.vstack((add, img))
 		# shift down
 
 	else:
 		add = np.zeros((1,img.shape[1], 3))
-		img = img[ 1:img.shape[1], :]
+		img = img[ 1:img.shape[0], :]
 		img = np.vstack((img, add))
 	return img
 
-base 		= 'Pictures/'
+base 		= 'Positional Pictures/GuardF/'
 positions 	= os.listdir(base)
 detector 	= dlib.get_frontal_face_detector()
 predictor 	= dlib.shape_predictor('dlibcascades/shape_predictor_68_face_landmarks.dat')
@@ -89,26 +89,22 @@ nose 		= [0, 0]
 
 
 
-# for image in images:
-# 	img = cv2.imread(base + image)
-# 	dets = detector(img, 1)
-# 	for k, d in enumerate(dets):
-# 	    l_eyes, r_eyes, mouth, nose = get_params(img, d, l_eyes, r_eyes, mouth, nose)
+for image in images:
+	img = cv2.imread(base + image)
+	dets = detector(img, 1)
+	for k, d in enumerate(dets):
+	    l_eyes, r_eyes, mouth, nose = get_params(img, d, l_eyes, r_eyes, mouth, nose)
 
-# 	print("Training via " + image)
+	print("Training via " + image)
 
-# # Average calculation
-# l_eyes 	= [int(x/len(images)) for x in l_eyes]
-# r_eyes 	= [int(x/len(images)) for x in r_eyes]
-# mouth 	= [int(0.5*x/len(images)) for x in mouth]
-# nose 	= [int(0.5*x/len(images)) for x in nose]
+# Average calculation
+l_eyes 	= [int(x/len(images)) for x in l_eyes]
+r_eyes 	= [int(x/len(images)) for x in r_eyes]
+mouth 	= [int(0.5*x/len(images)) for x in mouth]
+nose 	= [int(0.5*x/len(images)) for x in nose]
 
-# print(l_eyes, r_eyes, mouth, nose)
+print(l_eyes, r_eyes, mouth, nose)
 
-l_eyes  = [116, 66]
-r_eyes	= [143, 63]
-mouth 	= [130, 98]
-nose  	= [126, 76]
 lr_mean = [(l_eyes[0] + r_eyes[0])/2.0 ,(l_eyes[1] + r_eyes[1])/2.0]
 
 for image in images:
