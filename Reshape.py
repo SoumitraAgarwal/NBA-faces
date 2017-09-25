@@ -76,8 +76,7 @@ def correctposy(img, correction):
 		img = np.vstack((img, add))
 	return img
 
-base 		= 'Positional Pictures/GuardF/'
-positions 	= os.listdir(base)
+base 		= 'Pictures/'
 detector 	= dlib.get_frontal_face_detector()
 predictor 	= dlib.shape_predictor('dlibcascades/shape_predictor_68_face_landmarks.dat')
 images 		= os.listdir(base)
@@ -85,8 +84,6 @@ l_eyes 		= [0, 0]
 r_eyes		= [0, 0]
 mouth 		= [0, 0]
 nose 		= [0, 0]
-
-
 
 
 for image in images:
@@ -181,7 +178,7 @@ for image in images:
 		
 		cv2.imwrite("Worked/" + image, img)			
 		start 	= 0
-		while(abs(correctiony) > 2):
+		while(abs(correctiony) > 1):
 			
 			print(correctiony)	
 			start += 1
