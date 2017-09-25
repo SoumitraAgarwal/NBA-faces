@@ -4,7 +4,6 @@ import os
 
 base = 'Worked/'
 images = os.listdir(base)
-images = images[150:225]
 output = cv2.imread(base + images[0])
 image1 = cv2.imread(base + images[1])
 
