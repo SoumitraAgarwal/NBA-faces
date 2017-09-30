@@ -14,6 +14,6 @@ for i in range(2,len(images)):
 	# load the image
 	image1 = cv2.imread(base + images[i])
 	cv2.addWeighted(image1, 1.0/len(images), output, 1, 0, output)
-cv2.imwrite("Output4.png", output)
+cv2.imwrite("Combines/NBA4.png", output)
 
 
