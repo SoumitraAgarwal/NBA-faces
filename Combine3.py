@@ -2,11 +2,22 @@ import numpy as np
 import cv2
 import os
 
-output = cv2.imread("Output2.png")
-image1 = cv2.imread("Output3.png")
+base = 'Posi/'
+positions = os.listdir(base)
 
-cv2.addWeighted(image1, 1.0/3, output, 1.0/3, 0, output)
+for position in positions:
 
-image1 = cv2.imread("Output4.png")
-cv2.addWeighted(image1, 1.0/3, output, 1, 0, output)
-cv2.imwrite("Output5.png", output)
+	images = os.listdir(base + position)
+	output = cv2.imread(base + position + "/" + images[0])
+	image1 = cv2.imread(base + position + "/" + images[1])
+	
+	cv2.addWeighted(image1, 1.0/len(images), output, 1.0/len(images), 0, output)
+
+	for i in range(2,len(images)):
+
+		# load the image
+		image1 = cv2.imread(base + position + "/" + images[i])
+		cv2.addWeighted(image1, 1.0/len(images), output, 1, 0, output)
+	cv2.imwrite("Posi/" + position + ".png", output)
+
+
